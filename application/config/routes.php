@@ -57,3 +57,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'login';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
+$route['data_guru'] = 'admin/dataGuru';
