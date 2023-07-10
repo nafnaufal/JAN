@@ -85,13 +85,13 @@
 
               <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
                 <div class="mb-3">
-                  <label for="username" class="form-label">Nama Pengguna</label>
+                  <label for="email" class="form-label">Email</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="username"
-                    name="username"
-                    placeholder="Masukkan nama pengguna"
+                    id="email"
+                    name="email"
+                    placeholder="Masukkan email"
                     autofocus
                   />
                 </div>
@@ -99,7 +99,7 @@
                   <label class="form-label" for="password">Password</label>
                   <div class="input-group input-group-merge">
                     <input
-                      type="password"
+                    type="password"
                       id="password"
                       class="form-control"
                       name="password"
@@ -108,6 +108,38 @@
                     />
                     <span class="input-group-text cursor-pointer"><i class="bi bi-eye-slash"></i></span>
                   </div>
+                </div>
+                <div class="mb-3">
+                  <label for="hp" class="form-label">No. HP</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="hp"
+                    name="hp"
+                    placeholder="Masukkan No. HP"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="anak" class="form-label">Nama Anak</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="anak"
+                    name="anak"
+                    placeholder="Masukkan Nama Anak"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="tanggal_lahir" class="form-label">Tanggal Lahir Anak</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="tanggal_lahir"
+                    name="tanggal_lahir"
+                    placeholder="Masukkan Tanggal Lahir Anak"
+                  />
                 </div>
 
                 <button class="btn btn-primary d-grid w-100">Daftar</button>
