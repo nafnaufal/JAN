@@ -23,9 +23,9 @@ class Login extends CI_Controller {
     if($akun != null) {
       $this->load->library('session');
       $this->session->set_userdata('username', $akun->username);
-      redirect('/admin/dashboard', 'refresh');
+      redirect(base_url().'admin/dashboard', 'refresh');
     }else{
-      redirect('/login', 'refresh');
+      redirect(base_url().'login', 'refresh');
     }
   }
 }

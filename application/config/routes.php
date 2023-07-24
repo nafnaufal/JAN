@@ -61,7 +61,10 @@ $route['register'] = 'register';
 $route['register/save'] = 'register/save_data';
 $route['data_guru'] = 'admin/dataGuru';
 $route['data_guru/add'] = 'admin/addGuru';
+$route['data_guru/save'] = 'admin/saveGuru';
 $route['data_guru/edit'] = 'admin/editGuru';
+$route['data_guru/update'] = 'admin/updateGuru';
+$route['data_guru/delete'] = 'admin/deleteGuru';
 
 // Data Siswa
 $route['data_siswa'] = 'admin/dataSiswa';

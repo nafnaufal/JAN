@@ -90,7 +90,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>" class="menu-link">
+              <a href="<?php echo base_url(); ?>admin/dashboard" class="menu-link">
                 <i class="bi bi-house-fill mx-1"></i> 
                 <div data-i18n="Analytics">Dashboard</div>
               </a>

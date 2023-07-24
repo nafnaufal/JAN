@@ -20,7 +20,7 @@ class Register extends CI_Controller {
 
 		$this->Akun_model->save_data();
 
-		redirect('/login', 'refresh');
+		redirect(base_url().'/login', 'refresh');
 	}
 }
 ?>

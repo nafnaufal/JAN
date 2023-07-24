@@ -8,8 +8,11 @@ class Admin extends CI_Controller
     public function dataGuru()
     {
         $this->load->helper('url');
+        $this->load->model('Guru_model');
+        $data['data'] = $this->Guru_model->get_all_guru();
+
         $this->load->view('templates/header');
-        $this->load->view('admin/data_guru/browse');
+        $this->load->view('admin/data_guru/browse', $data);
         $this->load->view('templates/footer');
     }
     public function addGuru()
@@ -19,12 +22,42 @@ class Admin extends CI_Controller
         $this->load->view('admin/data_guru/add');
         $this->load->view('templates/footer');
     }
+    public function saveGuru()
+    {
+        $this->load->model('Guru_model');
+        $this->load->helper('url');
+
+        $this->Guru_model->save_data();
+
+        redirect(base_url().'data_guru', 'refresh');
+    }
     public function editGuru()
     {
         $this->load->helper('url');
+        $this->load->model('Guru_model');
+        $data['data'] = $this->Guru_model->get_guru();
+
         $this->load->view('templates/header');
-        $this->load->view('admin/data_guru/edit');
+        $this->load->view('admin/data_guru/edit', $data);
         $this->load->view('templates/footer');
+    }
+    public function updateGuru()
+    {
+        $this->load->model('Guru_model');
+        $this->load->helper('url');
+
+        $this->Guru_model->update_data();
+
+        redirect(base_url().'data_guru', 'refresh');
+    }
+    public function deleteGuru()
+    {
+        $this->load->model('Guru_model');
+        $this->load->helper('url');
+
+        $this->Guru_model->delete_data();
+
+        redirect(base_url().'data_guru', 'refresh');
     }
 
     // Data Siswa
@@ -79,5 +112,5 @@ class Admin extends CI_Controller
         $this->load->view('admin/pendaftaran/view');
         $this->load->view('templates/footer');
     }
-
+    
 }

@@ -13,29 +13,29 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="<?= base_url() ?>data_guru/update?id=<?= $data->id ?>">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nama">Nama</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="nama" placeholder="Nama" />
+                                    <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" value="<?= $data->nama ?>" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nip">NIP</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="nip" placeholder="NIP" />
+                                    <input type="number" class="form-control" id="nip" placeholder="NIP" name="nip" value="<?= $data->nip ?>" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="jabatan">Jabatan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="jabatan" placeholder="Jabatan" />
+                                    <input type="text" class="form-control" id="jabatan" placeholder="Jabatan" name="jabatan" value="<?= $data->jabatan ?>"/>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="kelas">Kelas</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="kelas" placeholder="Kelas" />
+                                    <input type="text" class="form-control" id="kelas" placeholder="Kelas" name="kelas" value="<?= $data->kelas ?>" />
                                 </div>
                             </div>
                             <div class="row justify-content-end">

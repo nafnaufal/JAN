@@ -28,7 +28,7 @@ class Welcome extends CI_Controller {
       $this->load->view('dashboard');
       $this->load->view('templates/footer');
 		} else {
-			redirect('/login', 'refresh');
+			redirect(base_url().'login', 'refresh');
 		}
 	}
 }
