@@ -3,37 +3,26 @@
     <!-- Content -->
 
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data Guru /</span> Browse</h4>
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data Siswa /</span> Browse</h4>
 
         <!-- Basic Bootstrap Table -->
         <div class="card">
-            <h5 class="card-header">Data Guru</h5>
+            <h5 class="card-header">Data Siswa</h5>
             <div class="table-responsive text-nowrap">
                 <table class="table">
                     <thead>
                         <tr>
                             <th>Nama</th>
-                            <th>NIP</th>
-                            <th>Mata Pelajaran</th>
-                            <th>Jam Mengajar</th>
+                            <th>Asal Sekolah</th>
+                            <th>Tanggal lahir</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
                         <tr>
                             <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Albert Cook</strong></td>
-                            <td>1111111</td>
-                            <td>
-                                <ul>
-                                    <li>
-                                        Matematika
-                                    </li>
-                                    <li>
-                                        IPA
-                                    </li>
-                                </ul>
-                            </td>
-                            <td><span class="badge bg-label-danger me-1">2 Jam</span></td>
+                            <td>SMAN 3 Jakarta</td>
+                            <td><span>19 Februari 2004</span></td>
                             <td>
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -49,18 +38,8 @@
                         </tr>
                         <tr>
                             <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>Barry Hunter</strong></td>
-                            <td>12121121</td>
-                            <td>
-                                <ul>
-                                    <li>
-                                        Matematika
-                                    </li>
-                                    <li>
-                                        IPA
-                                    </li>
-                                </ul>
-                            </td>
-                            <td><span class="badge bg-label-success me-1">20 Jam</span></td>
+                            <td>SMAN 3 Jakarta</td>
+                            <td><span>19 Februari 2004</span></td>
                             <td>
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -76,18 +55,8 @@
                         </tr>
                         <tr>
                             <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>Barry Hunter</strong></td>
-                            <td>12121121</td>
-                            <td>
-                                <ul>
-                                    <li>
-                                        Matematika
-                                    </li>
-                                    <li>
-                                        IPA
-                                    </li>
-                                </ul>
-                            </td>
-                            <td><span class="badge bg-label-success me-1">20 Jam</span></td>
+                            <td>SMAN 3 Jakarta</td>
+                            <td><span>19 Februari 2004</span></td>
                             <td>
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">

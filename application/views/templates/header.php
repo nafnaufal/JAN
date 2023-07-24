@@ -75,7 +75,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
               <div class="app-brand justify-content-center">
-                <a href="#" class="app-brand-link gap-2">
+                <a href="<?php echo base_url(); ?>" class="app-brand-link gap-2">
                   <span class="app-brand-text demo text-body fw-bolder">SIATKKB</span>
                 </a>
               </div>
@@ -89,10 +89,28 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
-              <a href="#" class="menu-link">
-                <i class="bi bi-house mx-1"></i> 
+            <li class="menu-item">
+              <a href="<?php echo base_url(); ?>" class="menu-link">
+                <i class="bi bi-house-fill mx-1"></i> 
                 <div data-i18n="Analytics">Dashboard</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="<?php echo base_url(); ?>data_guru" class="menu-link">
+                <i class="bi bi-mortarboard-fill mx-1"></i> 
+                <div data-i18n="Analytics">Data Guru</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="<?php echo base_url(); ?>data_siswa" class="menu-link">
+                <i class="bi bi-people-fill mx-1"></i> 
+                <div data-i18n="Analytics">Data Siswa</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="<?php echo base_url(); ?>pendaftaran" class="menu-link">
+                <i class="bi bi-clipboard-check-fill mx-1"></i> 
+                <div data-i18n="Analytics">Pendaftaran</div>
               </a>
             </li>
           </ul>
@@ -127,7 +145,7 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <div class="dropdown-item">
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
@@ -139,39 +157,15 @@
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
-                      </a>
+                      </div>
                     </li>
                     <li>
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-cog me-2"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
+                      <a class="dropdown-item align-middle" href="auth-login-basic.html">
+                        <i class="bi bi-box-arrow-right mx-1 text-danger"></i>
+                        <span class="">Keluar</span>
                       </a>
                     </li>
                   </ul>
