@@ -50,14 +50,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 // $route['login'] = 'Auth/login';
-$route['default_controller'] = 'welcome';
+// $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-// $route[''] = 'welcome';
+$route['admin/dashboard'] = 'welcome';
 $route['login'] = 'login';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
 // Data Guru
+$route['register/save'] = 'register/save_data';
 $route['data_guru'] = 'admin/dataGuru';
 $route['data_guru/add'] = 'admin/addGuru';
 $route['data_guru/edit'] = 'admin/editGuru';

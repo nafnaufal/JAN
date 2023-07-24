@@ -83,7 +83,7 @@
               <!-- /Logo -->
               <h4 class="mb-2">Sistem Informasi Akademik TK KB</h4>
 
-              <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+              <form id="formAuthentication" class="mb-3" action="register/save" method="POST">
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
                   <input
@@ -142,7 +142,7 @@
                   />
                 </div>
 
-                <button class="btn btn-primary d-grid w-100">Daftar</button>
+                <input type="submit" class="btn btn-primary d-grid w-100" value="Daftar">
               </form>
 
               <p class="text-center">
