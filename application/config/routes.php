@@ -57,7 +57,19 @@ $route['admin/dashboard'] = 'welcome';
 $route['login'] = 'login';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
+// Data Guru
 $route['register/save'] = 'register/save_data';
 $route['data_guru'] = 'admin/dataGuru';
+$route['data_guru/add'] = 'admin/addGuru';
+$route['data_guru/edit'] = 'admin/editGuru';
+
+// Data Siswa
 $route['data_siswa'] = 'admin/dataSiswa';
+$route['data_siswa/add'] = 'admin/addSiswa';
+$route['data_siswa/edit'] = 'admin/editSiswa';
+
+// Pendaftara
 $route['pendaftaran'] = 'admin/pendaftaran';
+$route['pendaftaran/add'] = 'admin/addPendaftaran';
+$route['pendaftaran/edit'] = 'admin/editPendaftaran';
+$route['pendaftaran/view'] = 'admin/viewPendaftaran';
