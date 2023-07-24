@@ -58,3 +58,6 @@ $route['login'] = 'login';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
 $route['register/save'] = 'register/save_data';
+$route['data_guru'] = 'admin/dataGuru';
+$route['data_siswa'] = 'admin/dataSiswa';
+$route['pendaftaran'] = 'admin/pendaftaran';

@@ -85,7 +85,7 @@
 
               <form id="formAuthentication" class="mb-3" action="login/auth" method="POST">
                 <div class="mb-3">
-                  <label for="email" class="form-label">Nama pengguna</label>
+                  <label for="email" class="form-label">Email</label>
                   <input
                     type="text"
                     class="form-control"

@@ -24,7 +24,9 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 
 		if($this->session->has_userdata('username')) {
-			$this->load->view('dashboard');
+			$this->load->view('templates/header');
+      $this->load->view('dashboard');
+      $this->load->view('templates/footer');
 		} else {
 			redirect('/login', 'refresh');
 		}
