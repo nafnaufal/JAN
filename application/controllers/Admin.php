@@ -27,9 +27,11 @@ class Admin extends CI_Controller
     public function saveGuru()
     {
         $this->load->model('Guru_model');
+        $this->load->model('Akun_model');
         $this->load->helper('url');
         $this->load->library('session');
 
+        $this->Akun_model->save_data('guru');
         $this->Guru_model->save_data();
 
         redirect(base_url().'data_guru', 'refresh');

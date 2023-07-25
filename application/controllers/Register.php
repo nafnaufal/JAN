@@ -26,7 +26,7 @@ class Register extends CI_Controller {
 			: (date("Y") - $birthDate[0]));
 		
 		if($age >= 5) {
-			$this->Akun_model->save_data();
+			$this->Akun_model->save_data('wali_murid');
 			$this->Pendaftaran_model->save_data();
 
 			redirect(base_url().'login', 'refresh');

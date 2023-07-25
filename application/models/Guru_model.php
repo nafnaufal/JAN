@@ -3,7 +3,7 @@
 class Guru_model extends CI_model {
   public function save_data() {
     $nama = $_POST['nama'];
-    $nip = $_POST['nip'];
+    $nip = $_POST['username'];
     $jabatan = $_POST['jabatan'];
     $kelas = $_POST['kelas'];
     // $hp = $_POST['hp'];
@@ -62,6 +62,15 @@ class Guru_model extends CI_model {
     $id = $_GET['id'];
     $this->load->database();
     $this->db->where('id', $id);
+    $query = $this->db->get('guru');
+    $data = $query->result()[0];
+
+    return $data;
+   }
+
+   public function get_guru_by_nip($nip) {
+    $this->load->database();
+    $this->db->where('nip', $nip);
     $query = $this->db->get('guru');
     $data = $query->result()[0];
 

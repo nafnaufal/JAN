@@ -90,7 +90,7 @@
                     type="text"
                     class="form-control"
                     id="email"
-                    name="email"
+                    name="username"
                     placeholder="Masukkan email"
                     autofocus
                   />

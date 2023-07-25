@@ -153,7 +153,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block"><?= $this->session->userdata('username') ?></span>
+                            <span class="fw-semibold d-block"><?= $this->session->userdata('name') ?></span>
                             <small class="text-muted"><?= ucwords($this->session->userdata('role')) ?></small>
                           </div>
                         </div>
