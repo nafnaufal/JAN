@@ -20,9 +20,15 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->library('session');
 		$this->load->helper('url');
-		$this->load->view('templates/header');
-		$this->load->view('dashboard');
-		$this->load->view('templates/footer');
+
+		if($this->session->has_userdata('username')) {
+			$this->load->view('templates/header');
+      $this->load->view('dashboard');
+      $this->load->view('templates/footer');
+		} else {
+			redirect('/login', 'refresh');
+		}
 	}
 }
