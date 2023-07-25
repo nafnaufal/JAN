@@ -29,8 +29,6 @@ class Akun_model extends CI_model {
     $password = $_POST['password'];
     $role = 'wali_murid';
     // $hp = $_POST['hp'];
-    // $anak = $_POST['anak'];
-    // $tanggal_lahir = $_POST['tanggal_lahir'];
 
     $this->load->database();
     $this->db->insert('akun', array(

@@ -13,52 +13,52 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="<?= base_url() ?>pendaftaran/save">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nama">Nama Anak</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="nama" placeholder="Nama" />
+                                    <input type="text" class="form-control" id="nama" name="anak" placeholder="Nama" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="tanggal">Tanggal Lahir</label>
                                 <div class="col-sm-10">
-                                    <input type="date" class="form-control" id="tanggal" />
+                                    <input type="date" class="form-control" id="tanggal" name="tanggal_lahir" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="kelamin">Jenis Kelamin</label>
                                 <div class="col-sm-10">
-                                    <select class="form-select" id="kelamin" aria-label="Jenis Kelamin">
-                                        <option value="pria" selected>Pria</option>
-                                        <option value="wanita">Wanita</option>
+                                    <select class="form-select" id="kelamin" name="jk" aria-label="Jenis Kelamin">
+                                        <option value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="ayah">Nama Ayah</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="ayah" placeholder="Nama Ayah" />
+                                    <input type="text" class="form-control" id="ayah" name="ayah" placeholder="Nama Ayah" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="ibu">Nama Ibu</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="ibu" placeholder="Nama Ibu" />
+                                    <input type="text" class="form-control" id="ibu" name="ibu" placeholder="Nama Ibu" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="agama">Agama</label>
                                 <div class="col-sm-10">
                                     <div class="col-sm-10">
-                                        <select class="form-select" id="agama" aria-label="Agama">
-                                            <option value="pria" selected>Islam</option>
-                                            <option value="wanita">Katolik</option>
-                                            <option value="wanita">Protestan</option>
-                                            <option value="wanita">Hindu</option>
-                                            <option value="wanita">Budha</option>
-                                            <option value="wanita">Konghucu</option>
-                                            <option value="wanita">Lainnya</option>
+                                        <select class="form-select" id="agama" name="agama" aria-label="Agama">
+                                            <option value="Islam" selected>Islam</option>
+                                            <option value="Katolik">Katolik</option>
+                                            <option value="Protestan">Protestan</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Budha">Budha</option>
+                                            <option value="Konghucu">Konghucu</option>
+                                            <option value="Lainnya">Lainnya</option>
                                         </select>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="alamat">Alamat</label>
                                 <div class="col-sm-10">
-                                    <textarea id="alamat" class="form-control" placeholder="Alamat"></textarea>
+                                    <textarea id="alamat" class="form-control" name="alamat" placeholder="Alamat"></textarea>
                                 </div>
                             </div>
                             <div class="row justify-content-end">

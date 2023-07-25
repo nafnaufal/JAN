@@ -90,7 +90,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>" class="menu-link">
+              <a href="<?php echo base_url(); ?>admin/dashboard" class="menu-link">
                 <i class="bi bi-house-fill mx-1"></i> 
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -153,8 +153,8 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
+                            <span class="fw-semibold d-block"><?= $this->session->userdata('username') ?></span>
+                            <small class="text-muted"><?= ucwords($this->session->userdata('role')) ?></small>
                           </div>
                         </div>
                       </div>
@@ -163,7 +163,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item align-middle" href="auth-login-basic.html">
+                      <a class="dropdown-item align-middle" href="<?= base_url() ?>logout">
                         <i class="bi bi-box-arrow-right mx-1 text-danger"></i>
                         <span class="">Keluar</span>
                       </a>
