@@ -132,6 +132,20 @@
                 </div>
 
                 <div class="mb-3">
+                  <label for="jk" class="form-label">Jenis Kelamin</label>
+                  <select
+                    type="text"
+                    class="form-control"
+                    id="jk"
+                    name="jk"
+                    placeholder="Pilih Jenis Kelamin"
+                  >
+                    <option value="Laki-Laki">Laki-Laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
                   <label for="tanggal_lahir" class="form-label">Tanggal Lahir Anak</label>
                   <input
                     type="date"
@@ -141,7 +155,30 @@
                     placeholder="Masukkan Tanggal Lahir Anak"
                   />
                 </div>
-
+                <div class="mb-3">
+                    <label class="form-label" for="ayah">Nama Ayah</label>
+                    <input type="text" class="form-control" id="ayah" name="ayah" placeholder="Nama Ayah" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ibu">Nama Ibu</label>
+                    <input type="text" class="form-control" id="ibu" name="ibu" placeholder="Nama Ibu" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="agama">Agama</label>
+                    <select class="form-select" id="agama" name="agama" aria-label="Agama">
+                        <option value="Islam" selected>Islam</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Protestan">Protestan</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="alamat">Alamat</label>
+                    <textarea id="alamat" class="form-control" name="alamat" placeholder="Alamat"></textarea>
+                </div>
                 <input type="submit" class="btn btn-primary d-grid w-100" value="Daftar">
               </form>
 

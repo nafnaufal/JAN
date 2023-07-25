@@ -50,11 +50,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 // $route['login'] = 'Auth/login';
-// $route['default_controller'] = 'welcome';
+$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin/dashboard'] = 'welcome';
 $route['login'] = 'login';
+$route['logout'] = 'login/logout';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
 // Data Guru
@@ -74,5 +75,7 @@ $route['data_siswa/edit'] = 'admin/editSiswa';
 // Pendaftara
 $route['pendaftaran'] = 'admin/pendaftaran';
 $route['pendaftaran/add'] = 'admin/addPendaftaran';
+$route['pendaftaran/save'] = 'admin/savePendaftaran';
 $route['pendaftaran/edit'] = 'admin/editPendaftaran';
+$route['pendaftaran/update'] = 'admin/updatePendaftaran';
 $route['pendaftaran/view'] = 'admin/viewPendaftaran';
