@@ -23,7 +23,7 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nip">NIP</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="nip" name="nip" placeholder="NIP" />
+                                    <input type="number" class="form-control" id="nip" name="username" placeholder="NIP" />
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -36,6 +36,12 @@
                                 <label class="col-sm-2 col-form-label" for="kelas">Kelas</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="kelas" name="kelas" placeholder="Kelas" />
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="password">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
                                 </div>
                             </div>
                             <div class="row justify-content-end">

@@ -23,6 +23,14 @@ class Login extends CI_Controller {
       $this->load->library('session');
       $this->session->set_userdata('username', $akun->username);
       $this->session->set_userdata('role', $akun->role);
+
+      if($akun->role === 'guru'){
+        $this->load->model('Guru_model');
+        $data = $this->Guru_model->get_guru_by_nip($akun->username);
+        $this->session->set_userdata('name', $data->nama);
+      }elseif ($akun->role === 'admin') {
+        $this->session->set_userdata('name', 'Admin TK');
+      }
       redirect(base_url().'admin/dashboard', 'refresh');
     }else{
       redirect(base_url().'login', 'refresh');
@@ -35,6 +43,7 @@ class Login extends CI_Controller {
     $this->load->library('session');
     $this->session->unset_userdata('username');
     $this->session->unset_userdata('role');
+    $this->session->unset_userdata('name');
     redirect(base_url().'login', 'refresh');
   }
 }
