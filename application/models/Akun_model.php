@@ -24,13 +24,10 @@ class Akun_model extends CI_model {
     }
   }
 
-  public function save_data() {
-    $email = $_POST['email'];
+  public function save_data($role) {
+    $email = $_POST['username'];
     $password = $_POST['password'];
-    $role = 'wali_murid';
     // $hp = $_POST['hp'];
-    // $anak = $_POST['anak'];
-    // $tanggal_lahir = $_POST['tanggal_lahir'];
 
     $this->load->database();
     $this->db->insert('akun', array(
