@@ -189,5 +189,13 @@ class Admin extends CI_Controller
         $this->load->view('templates/header');
         $this->load->view('admin/pendaftaran/view', $data);
         $this->load->view('templates/footer');
-    }    
+    }
+    
+    public function ganti_password()
+    {
+        $this->load->helper('url');
+        $this->load->view('templates/header');
+        $this->load->view('admin/ganti_password/edit');
+        $this->load->view('templates/footer');
+    }  
 }

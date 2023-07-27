@@ -79,3 +79,5 @@ $route['pendaftaran/save'] = 'admin/savePendaftaran';
 $route['pendaftaran/edit'] = 'admin/editPendaftaran';
 $route['pendaftaran/update'] = 'admin/updatePendaftaran';
 $route['pendaftaran/view'] = 'admin/viewPendaftaran';
+
+$route['ganti_password'] = 'admin/ganti_password';
