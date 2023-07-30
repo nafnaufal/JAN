@@ -5,7 +5,7 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data Guru /</span> Browse</h4>
 
-        <a href="<?php echo base_url(); ?>/data_guru/add" class="btn btn-primary mb-2">Add</a>
+        <a href="<?php echo base_url(); ?>admin/data_guru/add" class="btn btn-primary mb-2">Add</a>
         <!-- Basic Bootstrap Table -->
         <div class="card">
             <h5 class="card-header">Data Guru</h5>
@@ -41,7 +41,7 @@
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>/data_guru/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" href="<?php echo base_url(); ?>admin/data_guru/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                                         <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>/data_guru/delete"><i class="bx bx-trash me-1"></i> Delete</a>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>/data_guru/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" href="<?php echo base_url(); ?>admin/data_guru/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                                         <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>/data_guru/delete"><i class="bx bx-trash me-1"></i> Delete</a>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>/data_guru/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" href="<?php echo base_url(); ?>admin/data_guru/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                                         <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>/data_guru/delete"><i class="bx bx-trash me-1"></i> Delete</a>
                                     </div>
                                 </div>

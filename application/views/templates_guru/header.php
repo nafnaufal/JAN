@@ -75,7 +75,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
               <div class="app-brand justify-content-center">
-                <a href="<?php echo base_url(); ?>admin/dashboard" class="app-brand-link gap-2">
+                <a href="<?php echo base_url(); ?>guru/dashboard" class="app-brand-link gap-2">
                   <span>
                       <img src="<?php echo base_url(); ?>/assets/img/logo-jan.png" alt="logo" height="50px">
                   </span>
@@ -92,31 +92,19 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/dashboard" class="menu-link">
-                <i class="bi bi-house-fill mx-1"></i> 
+              <a href="<?php echo base_url(); ?>guru/dashboard" class="menu-link">
+                <i class="bi bi-house-fill mx-1"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/data_guru" class="menu-link">
+              <a href="<?php echo base_url(); ?>guru/data_guru" class="menu-link">
                 <i class="bi bi-mortarboard-fill mx-1"></i> 
-                <div data-i18n="Analytics">Data Guru</div>
+                <div data-i18n="Analytics">Data Nilai</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/data_siswa" class="menu-link">
-                <i class="bi bi-people-fill mx-1"></i> 
-                <div data-i18n="Analytics">Data Siswa</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/pendaftaran" class="menu-link">
-                <i class="bi bi-clipboard-check-fill mx-1"></i> 
-                <div data-i18n="Analytics">Pendaftaran</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/ganti_password" class="menu-link">
+              <a href="<?php echo base_url(); ?>guru/ganti_password" class="menu-link">
                 <i class="bi bi-eye-fill mx-1"></i> 
                 <div data-i18n="Analytics">Ganti Password</div>
               </a>
