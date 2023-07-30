@@ -50,10 +50,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 // $route['login'] = 'Auth/login';
-// $route['default_controller'] = 'welcome';
+$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'login';
+$route['logout'] = 'login/logout';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
 $route['register/save'] = 'register/save_data';
@@ -82,9 +83,10 @@ $route['admin/ganti_password'] = 'admin/ganti_password';
 // Guru
 $route['guru/dashboard'] = 'guru';
 
-$route['guru/nilai'] = 'guru/nilai';
-$route['guru/nilai/add'] = 'guru/addNilai';
-$route['guru/nilai/edit'] = 'guru/editNilai';
-$route['guru/nilai/view'] = 'guru/viewNilai';
+// Pendaftara
+$route['pendaftaran'] = 'admin/pendaftaran';
+$route['pendaftaran/add'] = 'admin/addPendaftaran';
+$route['pendaftaran/edit'] = 'admin/editPendaftaran';
+$route['pendaftaran/view'] = 'admin/viewPendaftaran';
 
 $route['guru/ganti_password'] = 'guru/ganti_password';

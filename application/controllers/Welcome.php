@@ -26,10 +26,10 @@ class Welcome extends CI_Controller
 
 		// if ($this->session->has_userdata('username')) {
 			$this->load->view('templates/header');
-			$this->load->view('dashboard');
-			$this->load->view('templates/footer');
-		// } else {
-		// 	redirect('/login', 'refresh');
-		// }
+      $this->load->view('dashboard');
+      $this->load->view('templates/footer');
+		} else {
+			redirect(base_url().'login', 'refresh');
+		}
 	}
 }

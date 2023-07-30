@@ -16,11 +16,25 @@ class Register extends CI_Controller {
 		// $anak = $_POST['anak'];
 		// $tanggal_lahir = $_POST['tanggal_lahir'];
 		$this->load->model('Akun_model');
+		$this->load->model('Pendaftaran_model');
 		$this->load->helper('url');
 
-		$this->Akun_model->save_data();
+		$birthDate = explode("-", $_POST['tanggal_lahir']);
+		//get age from date or birthdate
+		$age = (date("md", date("U", mktime(0, 0, 0, $birthDate[1], $birthDate[2], $birthDate[0]))) > date("md")
+			? ((date("Y") - $birthDate[0]) - 1)
+			: (date("Y") - $birthDate[0]));
+		
+		if($age >= 5) {
+			$this->Akun_model->save_data('wali_murid');
+			$this->Pendaftaran_model->save_data();
 
-		redirect('/login', 'refresh');
+			redirect(base_url().'login', 'refresh');
+		} else {
+			echo "<script>if(!alert(\"Maaf anak anda belum cukup umur\")) document.location = '".base_url()."register';</script>";
+		}
+
+		
 	}
 }
 ?>
