@@ -75,10 +75,8 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
               <div class="app-brand justify-content-center">
-                <a href="<?php echo base_url(); ?>admin/dashboard" class="app-brand-link gap-2">
-                  <span>
-                      <img src="<?php echo base_url(); ?>/assets/img/logo-jan.png" alt="logo" height="50px">
-                  </span>
+                <a href="<?php echo base_url(); ?>" class="app-brand-link gap-2">
+                  <span class="app-brand-text demo text-body fw-bolder">SIATKKB</span>
                 </a>
               </div>
 
@@ -98,27 +96,21 @@
               </a>
             </li>
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/data_guru" class="menu-link">
+              <a href="<?php echo base_url(); ?>data_guru" class="menu-link">
                 <i class="bi bi-mortarboard-fill mx-1"></i> 
                 <div data-i18n="Analytics">Data Guru</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/data_siswa" class="menu-link">
+              <a href="<?php echo base_url(); ?>data_siswa" class="menu-link">
                 <i class="bi bi-people-fill mx-1"></i> 
                 <div data-i18n="Analytics">Data Siswa</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/pendaftaran" class="menu-link">
+              <a href="<?php echo base_url(); ?>pendaftaran" class="menu-link">
                 <i class="bi bi-clipboard-check-fill mx-1"></i> 
                 <div data-i18n="Analytics">Pendaftaran</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="<?php echo base_url(); ?>admin/ganti_password" class="menu-link">
-                <i class="bi bi-eye-fill mx-1"></i> 
-                <div data-i18n="Analytics">Ganti Password</div>
               </a>
             </li>
           </ul>

@@ -4,7 +4,7 @@
 
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Pendaftaran /</span> Browse</h4>
-        <a href="<?php echo base_url(); ?>admin/pendaftaran/add" class="btn btn-primary mb-2">Add</a>
+        <a href="<?php echo base_url(); ?>/pendaftaran/add" class="btn btn-primary mb-2">Add</a>
 
         <!-- Basic Bootstrap Table -->
         <div class="card">

@@ -53,40 +53,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['admin/dashboard'] = 'welcome';
 $route['login'] = 'login';
 $route['logout'] = 'login/logout';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
+// Data Guru
 $route['register/save'] = 'register/save_data';
+$route['data_guru'] = 'admin/dataGuru';
+$route['data_guru/add'] = 'admin/addGuru';
+$route['data_guru/save'] = 'admin/saveGuru';
+$route['data_guru/edit'] = 'admin/editGuru';
+$route['data_guru/update'] = 'admin/updateGuru';
+$route['data_guru/delete'] = 'admin/deleteGuru';
 
-
-$route['admin/dashboard'] = 'welcome';
-
-// Admin Data Guru
-$route['admin/data_guru'] = 'admin/dataGuru';
-$route['admin/data_guru/add'] = 'admin/addGuru';
-$route['admin/data_guru/edit'] = 'admin/editGuru';
-
-// Admin Data Siswa
-$route['admin/data_siswa'] = 'admin/dataSiswa';
-$route['admin/data_siswa/add'] = 'admin/addSiswa';
-$route['admin/data_siswa/edit'] = 'admin/editSiswa';
-
-// Admin Pendaftaran
-$route['admin/pendaftaran'] = 'admin/pendaftaran';
-$route['admin/pendaftaran/add'] = 'admin/addPendaftaran';
-$route['admin/pendaftaran/edit'] = 'admin/editPendaftaran';
-$route['admin/pendaftaran/view'] = 'admin/viewPendaftaran';
-
-$route['admin/ganti_password'] = 'admin/ganti_password';
-
-// Guru
-$route['guru/dashboard'] = 'guru';
+// Data Siswa
+$route['data_siswa'] = 'admin/dataSiswa';
+$route['data_siswa/add'] = 'admin/addSiswa';
+$route['data_siswa/edit'] = 'admin/editSiswa';
 
 // Pendaftara
 $route['pendaftaran'] = 'admin/pendaftaran';
 $route['pendaftaran/add'] = 'admin/addPendaftaran';
+$route['pendaftaran/save'] = 'admin/savePendaftaran';
 $route['pendaftaran/edit'] = 'admin/editPendaftaran';
+$route['pendaftaran/update'] = 'admin/updatePendaftaran';
 $route['pendaftaran/view'] = 'admin/viewPendaftaran';
-
-$route['guru/ganti_password'] = 'guru/ganti_password';
