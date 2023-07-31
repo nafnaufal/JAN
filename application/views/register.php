@@ -77,9 +77,7 @@
               <!-- Logo -->
               <div class="app-brand justify-content-center">
                 <a href="index.html" class="app-brand-link gap-2">
-                  <span>
-                                        <img src="<?php echo base_url(); ?>/assets/img/logo-jan.png" alt="logo" height="100px">
-                  </span>
+                  <span class="app-brand-text demo text-body fw-bolder">SIATKKB</span>
                 </a>
               </div>
               <!-- /Logo -->
