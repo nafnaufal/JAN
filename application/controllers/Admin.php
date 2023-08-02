@@ -34,7 +34,7 @@ class Admin extends CI_Controller
         $this->Akun_model->save_data('guru');
         $this->Guru_model->save_data();
 
-        redirect(base_url().'data_guru', 'refresh');
+        redirect(base_url().'admin/data_guru', 'refresh');
     }
     public function editGuru()
     {
@@ -55,7 +55,7 @@ class Admin extends CI_Controller
 
         $this->Guru_model->update_data();
 
-        redirect(base_url().'data_guru', 'refresh');
+        redirect(base_url().'admin/data_guru', 'refresh');
     }
     public function deleteGuru()
     {
@@ -65,7 +65,7 @@ class Admin extends CI_Controller
 
         $this->Guru_model->delete_data();
 
-        redirect(base_url().'data_guru', 'refresh');
+        redirect(base_url().'admin/data_guru', 'refresh');
     }
 
     // Data Siswa
@@ -73,8 +73,12 @@ class Admin extends CI_Controller
     {
         $this->load->helper('url');
         $this->load->library('session');
+
+        $this->load->model('Siswa_model');
+        $data['data'] = $this->Siswa_model->get_all();
+
         $this->load->view('templates/header');
-        $this->load->view('admin/data_siswa/browse');
+        $this->load->view('admin/data_siswa/browse', $data);
         $this->load->view('templates/footer');
     }
     public function addSiswa()
@@ -92,6 +96,19 @@ class Admin extends CI_Controller
         $this->load->view('templates/header');
         $this->load->view('admin/data_siswa/edit');
         $this->load->view('templates/footer');
+    }
+    public function saveSiswa()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $this->load->view('templates/header');
+        $this->load->view('admin/data_siswa/edit');
+        $this->load->view('templates/footer');
+
+        $this->load->model('Siswa_model');
+        $this->Siswa_model->save_data();
+
+        redirect(base_url().'admin/data_siswa', 'refresh');
     }
 
     // Pendaftaran
