@@ -119,7 +119,7 @@
 
               <p class="text-center">
                 <span>Belum punya akun?</span>
-                <a href="register">
+                <a href="<?= base_url() ?>register">
                   <span>Buat akun</span>
                 </a>
               </p>
