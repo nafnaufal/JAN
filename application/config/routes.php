@@ -58,6 +58,7 @@ $route['logout'] = 'login/logout';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
 $route['register/save'] = 'register/save_data';
+$route['register/update_pass'] = 'register/change_pass';
 
 $route['admin/dashboard'] = 'welcome';
 

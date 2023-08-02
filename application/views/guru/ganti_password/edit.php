@@ -13,23 +13,23 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="<?= base_url() ?>/register/update_pass">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="lama">Password Lama</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="lama" placeholder="Password Lama" />
+                                    <input type="password" class="form-control" id="lama" name="lama" placeholder="Password Lama" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="baru">Password Baru</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="baru" placeholder="Password Baru" />
+                                    <input type="password" class="form-control" id="baru" name="baru" placeholder="Password Baru" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="ulangbaru">Ulang Password Baru</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="ulangbaru" placeholder="Ulang Password Baru" />
+                                    <input type="password" class="form-control" id="ulangbaru" name="ulangbaru" placeholder="Ulang Password Baru" />
                                 </div>
                             </div>
 

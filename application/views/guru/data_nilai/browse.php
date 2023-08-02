@@ -8,7 +8,7 @@
 
         <!-- Basic Bootstrap Table -->
         <div class="card">
-            <h5 class="card-header">Pendaftaran</h5>
+            <h5 class="card-header">Nilai</h5>
             <div class="table-responsive text-nowrap">
                 <table class="table">
                     <thead>

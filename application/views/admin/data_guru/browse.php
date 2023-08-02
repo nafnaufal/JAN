@@ -5,7 +5,7 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data Guru /</span> Browse</h4>
 
-        <a href="<?php echo base_url(); ?>/data_guru/add" class="btn btn-primary mb-2">Add</a>
+        <a href="<?php echo base_url(); ?>admin/data_guru/add" class="btn btn-primary mb-2">Add</a>
         <!-- Basic Bootstrap Table -->
         <div class="card">
             <h5 class="card-header">Data Guru</h5>
