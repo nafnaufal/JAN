@@ -80,6 +80,8 @@ $route['admin/pendaftaran'] = 'admin/pendaftaran';
 $route['admin/pendaftaran/add'] = 'admin/addPendaftaran';
 $route['admin/pendaftaran/edit'] = 'admin/editPendaftaran';
 $route['admin/pendaftaran/view'] = 'admin/viewPendaftaran';
+$route['admin/pendaftaran/save'] = 'admin/savePendaftaran';
+$route['admin/pendaftaran/update'] = 'admin/updatePendaftaran';
 
 $route['admin/ganti_password'] = 'admin/ganti_password';
 
@@ -98,3 +100,7 @@ $route['pendaftaran/edit'] = 'admin/editPendaftaran';
 $route['pendaftaran/view'] = 'admin/viewPendaftaran';
 
 $route['guru/ganti_password'] = 'guru/ganti_password';
+
+// Wali Murid
+$route['wali/dashboard'] = 'wali';
+$route['wali/pendaftaran'] = 'wali/viewPendaftaran';

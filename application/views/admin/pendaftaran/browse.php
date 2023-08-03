@@ -4,7 +4,7 @@
 
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Pendaftaran /</span> Browse</h4>
-        <a href="<?php echo base_url(); ?>/pendaftaran/add" class="btn btn-primary mb-2">Add</a>
+        <a href="<?php echo base_url(); ?>admin/pendaftaran/add" class="btn btn-primary mb-2">Add</a>
 
         <!-- Basic Bootstrap Table -->
         <div class="card">
@@ -33,8 +33,8 @@
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>/pendaftaran/view?id=<?= $record->id ?>"><i class="bx bx-search-alt me-1"></i> Detail</a>
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>/pendaftaran/edit?id=<?= $record->id ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" href="<?php echo base_url(); ?>admin/pendaftaran/view?id=<?= $record->id ?>"><i class="bx bx-search-alt me-1"></i> Detail</a>
+                                        <a class="dropdown-item" href="<?php echo base_url(); ?>admin/pendaftaran/edit?id=<?= $record->id ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                                         <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>/pendaftaran/delete?id=<?= $record->id ?>"><i class="bx bx-trash me-1"></i> Delete</a>
                                     </div>
                                 </div>

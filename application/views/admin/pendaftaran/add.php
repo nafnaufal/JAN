@@ -13,7 +13,7 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="<?= base_url() ?>pendaftaran/save">
+                        <form method="POST" action="<?= base_url() ?>admin/pendaftaran/save">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nama">Nama Anak</label>
                                 <div class="col-sm-10">
