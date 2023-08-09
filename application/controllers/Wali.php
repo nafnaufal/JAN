@@ -9,7 +9,7 @@ class Wali extends CI_Controller
         $this->load->helper('url');
         $this->load->library('session');
         $this->load->view('templates_wali/header');
-        $this->load->view('dashboard');
+        $this->load->view('dashboard_wali');
         $this->load->view('templates_wali/footer');
     }
 
