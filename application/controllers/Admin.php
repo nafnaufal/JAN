@@ -139,6 +139,7 @@ class Admin extends CI_Controller
 		// $anak = $_POST['anak'];
 		// $tanggal_lahir = $_POST['tanggal_lahir'];
 		$this->load->model('Pendaftaran_model');
+		$this->load->model('Akun_model');
 		$this->load->helper('url');
         $this->load->library('session');
 
@@ -149,6 +150,8 @@ class Admin extends CI_Controller
 			: (date("Y") - $birthDate[0]));
 		
 		if($age >= 5) {
+            $_POST['username'] = strtolower(explode(" ", $_POST['anak'])[0]);
+			$this->Akun_model->save_data('wali_murid');
 			$this->Pendaftaran_model->save_data();
 
 			redirect(base_url().'pendaftaran', 'refresh');
