@@ -13,23 +13,38 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="<?= base_url() ?>guru/nilai/save">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="mapel">Mata Pelajaran</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="mapel" placeholder="Mata Pelajaran" />
+                                    <input type="text" class="form-control" id="mapel" name="mapel" placeholder="Mata Pelajaran" />
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="kkm">KKM</label>
+                                <label class="col-sm-2 col-form-label" for="siswa">Nama Siswa</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="kkm" />
+                                    <select class="form-select" id="siswa" name="siswa" aria-label="Siswa">
+                                        <?php 
+                                            foreach ($siswa as $record) {
+                                        ?>
+                                            <option value="<?= $record->id ?>" selected><?= $record->nama ?></option>
+                                        <?php
+                                            }
+                                        ?>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nilai">Nilai</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="nilai" />
+                                    <select class="form-select" id="nilai" name="nilai" aria-label="Nilai">
+                                        <option value="A" selected>A</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B">B</option>
+                                        <option value="C+">C+</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row justify-content-end">

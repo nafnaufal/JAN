@@ -33,8 +33,23 @@ class Register extends CI_Controller {
 		} else {
 			echo "<script>if(!alert(\"Maaf anak anda belum cukup umur\")) document.location = '".base_url()."register';</script>";
 		}
+	}
 
-		
+	public function change_pass()
+	{
+		// echo base_url();
+		$this->load->helper('url');
+    $this->load->library('session');
+		$this->load->model('Akun_model');
+
+		if($this->Akun_model->change_pass())
+		{
+			echo "<script>if(!alert(\"Password Berhasil Diganti\")) document.location = '".base_url().$this->session->userdata('role')."/dashboard';</script>";
+		}
+		else
+		{
+			echo "<script>if(!alert(\"Password Gagal Diganti\")) document.location = '".base_url().$this->session->userdata('role')."/dashboard';</script>";
+		}
 	}
 }
 ?>

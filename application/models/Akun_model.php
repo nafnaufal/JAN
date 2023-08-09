@@ -36,6 +36,30 @@ class Akun_model extends CI_model {
       'role' => $role
     ));
    }
+
+  public function change_pass()
+  {
+    $this->load->database();
+    $this->db->where(array('username' => $this->session->userdata('username')));
+    $query = $this->db->get('akun');
+    $akun = $query->result()[0];
+    
+    if(password_verify($_POST['lama'], $akun->password) && $_POST['baru'] === $_POST['ulangbaru']){
+      $newPass = $_POST['baru'];
+      $updatedAkun = array(
+        'id' => $akun->id,
+        'username' => $akun->username,
+        'password' => password_hash($newPass, PASSWORD_BCRYPT),
+        'role' => $akun->role
+      );
+
+      $this->db->replace('akun', $updatedAkun);
+
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 ?>

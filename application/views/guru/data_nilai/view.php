@@ -16,13 +16,13 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="nama">Nama Siswa</label>
                             <div class="col-sm-10">
-                                <span>Ayam D</span>
+                                <span><?= $siswa->nama ?></span>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="kelas">Kelas</label>
                             <div class="col-sm-10">
-                                <span>1 A</span>
+                                <span><?= $siswa->kelas ?></span>
                             </div>
                         </div>
                         <div class="table-responsive text-nowrap">
@@ -30,37 +30,24 @@
                                 <thead>
                                     <tr>
                                         <th>Mata Pelajaran</th>
-                                        <th>KKM</th>
                                         <th>Nilai</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="table-border-bottom-0">
+                                    <?php
+                                        foreach ($nilai as $record) {
+                                    ?>
                                     <tr>
-                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Matematik</strong></td>
-                                        <td><span>75</span></td>
-                                        <td>90</td>
+                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $record->id_mapel ?></strong></td>
+                                        <td><span><?= $record->nilai ?></span></td>
                                         <td>
                                             <a class="btn btn-danger" href="<?php echo base_url(); ?>/nilai/delete"><i class="bx bx-trash me-1"></i> Delete</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Matematik</strong></td>
-                                        <td><span>75</span></td>
-                                        <td>90</td>
-                                        <td>
-                                            <a class="btn btn-danger" href="<?php echo base_url(); ?>/nilai/delete"><i class="bx bx-trash me-1"></i> Delete</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Matematik</strong></td>
-                                        <td><span>75</span></td>
-                                        <td>90</td>
-                                        <td>
-                                            <a class="btn btn-danger" href="<?php echo base_url(); ?>/nilai/delete"><i class="bx bx-trash me-1"></i> Delete</a>
-                                        </td>
-                                    </tr>
-
+                                    <?php 
+                                        }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>

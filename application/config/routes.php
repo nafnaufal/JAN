@@ -58,7 +58,7 @@ $route['logout'] = 'login/logout';
 $route['login/auth'] = 'login/auth';
 $route['register'] = 'register';
 $route['register/save'] = 'register/save_data';
-
+$route['register/update_pass'] = 'register/change_pass';
 
 $route['admin/dashboard'] = 'welcome';
 
@@ -66,27 +66,41 @@ $route['admin/dashboard'] = 'welcome';
 $route['admin/data_guru'] = 'admin/dataGuru';
 $route['admin/data_guru/add'] = 'admin/addGuru';
 $route['admin/data_guru/edit'] = 'admin/editGuru';
+$route['admin/data_guru/save'] = 'admin/saveGuru';
+$route['admin/data_guru/update'] = 'admin/updateGuru';
 
 // Admin Data Siswa
 $route['admin/data_siswa'] = 'admin/dataSiswa';
 $route['admin/data_siswa/add'] = 'admin/addSiswa';
 $route['admin/data_siswa/edit'] = 'admin/editSiswa';
+$route['admin/data_siswa/save'] = 'admin/saveSiswa';
 
 // Admin Pendaftaran
 $route['admin/pendaftaran'] = 'admin/pendaftaran';
 $route['admin/pendaftaran/add'] = 'admin/addPendaftaran';
 $route['admin/pendaftaran/edit'] = 'admin/editPendaftaran';
 $route['admin/pendaftaran/view'] = 'admin/viewPendaftaran';
+$route['admin/pendaftaran/save'] = 'admin/savePendaftaran';
+$route['admin/pendaftaran/update'] = 'admin/updatePendaftaran';
 
 $route['admin/ganti_password'] = 'admin/ganti_password';
 
 // Guru
 $route['guru/dashboard'] = 'guru';
+$route['guru/nilai'] = 'guru/dataNilai';
+$route['guru/nilai/add'] = 'guru/addNilai';
+$route['guru/nilai/edit'] = 'guru/editNilai';
+$route['guru/nilai/view'] = 'guru/viewNilai';
+$route['guru/nilai/save'] = 'guru/saveNilai';
 
-// Pendaftara
+// Pendaftaran
 $route['pendaftaran'] = 'admin/pendaftaran';
 $route['pendaftaran/add'] = 'admin/addPendaftaran';
 $route['pendaftaran/edit'] = 'admin/editPendaftaran';
 $route['pendaftaran/view'] = 'admin/viewPendaftaran';
 
 $route['guru/ganti_password'] = 'guru/ganti_password';
+
+// Wali Murid
+$route['wali/dashboard'] = 'wali';
+$route['wali/pendaftaran'] = 'wali/viewPendaftaran';

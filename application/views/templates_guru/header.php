@@ -98,7 +98,7 @@
               </a>
             </li>
             <li class="menu-item">
-              <a href="<?php echo base_url(); ?>guru/data_guru" class="menu-link">
+              <a href="<?php echo base_url(); ?>guru/nilai" class="menu-link">
                 <i class="bi bi-mortarboard-fill mx-1"></i> 
                 <div data-i18n="Analytics">Data Nilai</div>
               </a>
@@ -149,8 +149,8 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
+                            <span class="fw-semibold d-block"><?= $this->session->userdata('name') ?></span>
+                            <small class="text-muted"><?= ucwords($this->session->userdata('role')) ?></small>
                           </div>
                         </div>
                       </div>
@@ -159,7 +159,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item align-middle" href="auth-login-basic.html">
+                      <a class="dropdown-item align-middle" href="<?= base_url() ?>logout">
                         <i class="bi bi-box-arrow-right mx-1 text-danger"></i>
                         <span class="">Keluar</span>
                       </a>

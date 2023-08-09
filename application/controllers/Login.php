@@ -28,10 +28,13 @@ class Login extends CI_Controller {
         $this->load->model('Guru_model');
         $data = $this->Guru_model->get_guru_by_nip($akun->username);
         $this->session->set_userdata('name', $data->nama);
+        redirect(base_url().'guru/dashboard', 'refresh');
+      }elseif ($akun->role === 'wali_murid') {
+        redirect(base_url().'wali/dashboard', 'refresh');
       }elseif ($akun->role === 'admin') {
         $this->session->set_userdata('name', 'Admin TK');
+        redirect(base_url().'admin/dashboard', 'refresh');
       }
-      redirect(base_url().'admin/dashboard', 'refresh');
     }else{
       redirect(base_url().'login', 'refresh');
     }

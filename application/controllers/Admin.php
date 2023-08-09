@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Guru extends CI_Controller
+class Admin extends CI_Controller
 {
 
     // Data Guru
@@ -34,7 +34,7 @@ class Guru extends CI_Controller
         $this->Akun_model->save_data('guru');
         $this->Guru_model->save_data();
 
-        redirect(base_url().'data_guru', 'refresh');
+        redirect(base_url().'admin/data_guru', 'refresh');
     }
     public function editGuru()
     {
@@ -55,7 +55,7 @@ class Guru extends CI_Controller
 
         $this->Guru_model->update_data();
 
-        redirect(base_url().'data_guru', 'refresh');
+        redirect(base_url().'admin/data_guru', 'refresh');
     }
     public function deleteGuru()
     {
@@ -65,7 +65,7 @@ class Guru extends CI_Controller
 
         $this->Guru_model->delete_data();
 
-        redirect(base_url().'data_guru', 'refresh');
+        redirect(base_url().'admin/data_guru', 'refresh');
     }
 
     // Data Siswa
@@ -73,8 +73,12 @@ class Guru extends CI_Controller
     {
         $this->load->helper('url');
         $this->load->library('session');
+
+        $this->load->model('Siswa_model');
+        $data['data'] = $this->Siswa_model->get_all();
+
         $this->load->view('templates/header');
-        $this->load->view('admin/data_siswa/browse');
+        $this->load->view('admin/data_siswa/browse', $data);
         $this->load->view('templates/footer');
     }
     public function addSiswa()
@@ -93,9 +97,22 @@ class Guru extends CI_Controller
         $this->load->view('admin/data_siswa/edit');
         $this->load->view('templates/footer');
     }
+    public function saveSiswa()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $this->load->view('templates/header');
+        $this->load->view('admin/data_siswa/edit');
+        $this->load->view('templates/footer');
+
+        $this->load->model('Siswa_model');
+        $this->Siswa_model->save_data();
+
+        redirect(base_url().'admin/data_siswa', 'refresh');
+    }
 
     // Pendaftaran
-    public function nilai()
+    public function pendaftaran()
     {
         $this->load->helper('url');
         $this->load->library('session');
@@ -106,7 +123,7 @@ class Guru extends CI_Controller
         $this->load->view('admin/pendaftaran/browse', $data);
         $this->load->view('templates/footer');
     }
-    public function addNilai()
+    public function addPendaftaran()
     {
         $this->load->helper('url');
         $this->load->library('session');
@@ -152,6 +169,33 @@ class Guru extends CI_Controller
         $this->load->view('admin/pendaftaran/edit', $data);
         $this->load->view('templates/footer');
     }
+    public function updatePendaftaran()
+	{
+		// $email = $_POST['email'];
+		// $password = $_POST['password'];
+		// $hp = $_POST['hp'];
+		// $anak = $_POST['anak'];
+		// $tanggal_lahir = $_POST['tanggal_lahir'];
+		$this->load->model('Pendaftaran_model');
+		$this->load->helper('url');
+        $this->load->library('session');
+
+		$birthDate = explode("-", $_POST['tanggal_lahir']);
+		//get age from date or birthdate
+		$age = (date("md", date("U", mktime(0, 0, 0, $birthDate[1], $birthDate[2], $birthDate[0]))) > date("md")
+			? ((date("Y") - $birthDate[0]) - 1)
+			: (date("Y") - $birthDate[0]));
+		
+		if($age >= 5) {
+			$this->Pendaftaran_model->update_data();
+
+			redirect(base_url().'pendaftaran', 'refresh');
+		} else {
+			echo "<script>if(!alert(\"Maaf anak anda belum cukup umur\")) document.location = '".base_url()."pendaftaran//edit?id=".$_GET['id']."';</script>";
+		}
+
+		
+	}
     public function viewPendaftaran()
     {
         $this->load->helper('url');
@@ -162,13 +206,5 @@ class Guru extends CI_Controller
         $this->load->view('templates/header');
         $this->load->view('admin/pendaftaran/view', $data);
         $this->load->view('templates/footer');
-    }
-    
-    public function ganti_password()
-    {
-        $this->load->helper('url');
-        $this->load->view('templates/header');
-        $this->load->view('admin/ganti_password/edit');
-        $this->load->view('templates/footer');
-    }  
+    }    
 }

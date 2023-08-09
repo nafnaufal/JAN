@@ -23,61 +23,30 @@
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
+                        <?php 
+                            foreach ($data as $record) {
+                        ?>
                         <tr>
-                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Albert Cook</strong></td>
-                            <td><span class="badge bg-label-success me-1">Aktif</span></td>
-                            <td>10 A</td>
-                            <td>Ayam</td>
-                            <td>1111111</td>
+                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $record->nama ?></strong></td>
+                            <td><span class="badge bg-label-success me-1"><?= $record->status ?></span></td>
+                            <td><?= $record->kelas ?></td>
+                            <td><?= $record->wali ?></td>
+                            <td><?= $record->no_hp ?></td>
                             <td>
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>admin/data_siswa/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" href="<?php echo base_url(); ?>/data_siswa/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                                         <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>/data_siswa/delete"><i class="bx bx-trash me-1"></i> Delete</a>
                                     </div>
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Albert Cook</strong></td>
-                            <td><span class="badge bg-label-success me-1">Aktif</span></td>
-                            <td>10 A</td>
-                            <td>Ayam</td>
-                            <td>1111111</td>
-                            <td>
-                                <div class="dropdown">
-                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>admin/data_siswa/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>/data_siswa/delete"><i class="bx bx-trash me-1"></i> Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Albert Cook</strong></td>
-                            <td><span class="badge bg-label-success me-1">Aktif</span></td>
-                            <td>10 A</td>
-                            <td>Ayam</td>
-                            <td>1111111</td>
-                            <td>
-                                <div class="dropdown">
-                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>admin/data_siswa/edit"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>/data_siswa/delete"><i class="bx bx-trash me-1"></i> Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
+                        <?php
+                            }
+                        ?>
                     </tbody>
                 </table>
             </div>
