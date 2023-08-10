@@ -24,9 +24,9 @@
                         </div>
                         <div class="col-10">
                           <?php
-                            if($data->status === "Menunggu Pengumuman Kelas") {
-                              echo $data->status;
-                            }
+                          if ($data->status === "Menunggu Pengumuman Kelas") {
+                            echo $data->status;
+                          }
                           ?>
                         </div>
                       </div>
@@ -44,6 +44,18 @@
                 </div>
               </div>
               <div class="card mb-4">
+                <h5 class="card-header">Pengumuman</h5>
+                <div class="card-body">
+                  Syarat Pendaftaran Ulang:
+                  <br>
+                  1. Bla bla bla
+                  <br>
+                  2. Bla bla bla
+                  <br>
+                  3. Bla bla bla
+                </div>
+              </div>
+              <div class="card mb-4">
                 <div class="table-responsive text-nowrap">
                   <table class="table">
                     <thead>
@@ -51,6 +63,7 @@
                         <th>Tanggal</th>
                         <th>Mata Pelajaran</th>
                         <th>Nilai</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
@@ -58,16 +71,31 @@
                         <td>19-2-2020</td>
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
                         <td><span class="badge bg-label-primary me-1">B</span></td>
+                        <td>
+                          <button type="button" class="btn btn-primary">
+                            Detail
+                          </button>
+                        </td>
                       </tr>
                       <tr>
                         <td>19-2-2020</td>
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
                         <td><span class="badge bg-label-primary me-1">B</span></td>
+                        <td>
+                          <button type="button" class="btn btn-primary">
+                            Detail
+                          </button>
+                        </td>
                       </tr>
                       <tr>
                         <td>19-2-2020</td>
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
                         <td><span class="badge bg-label-primary me-1">B</span></td>
+                        <td>
+                          <button type="button" class="btn btn-primary">
+                            Detail
+                          </button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
