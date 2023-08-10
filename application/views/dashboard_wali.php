@@ -44,26 +44,26 @@
                   <table class="table">
                     <thead>
                       <tr>
-                        <th>Tanggal / Waktu</th>
+                        <th>Tanggal</th>
                         <th>Mata Pelajaran</th>
-                        <th>Ruangan</th>
+                        <th>Nilai</th>
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
                       <tr>
-                        <td>19-2-2020 / 19.10 WIB</td>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Matematika</strong></td>
-                        <td><span class="badge bg-label-primary me-1">1 A</span></td>
+                        <td>19-2-2020</td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
+                        <td><span class="badge bg-label-primary me-1">B</span></td>
                       </tr>
                       <tr>
-                        <td>19-2-2020 / 19.10 WIB</td>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Matematika</strong></td>
-                        <td><span class="badge bg-label-primary me-1">1 A</span></td>
+                        <td>19-2-2020</td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
+                        <td><span class="badge bg-label-primary me-1">B</span></td>
                       </tr>
                       <tr>
-                        <td>19-2-2020 / 19.10 WIB</td>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Matematika</strong></td>
-                        <td><span class="badge bg-label-primary me-1">1 A</span></td>
+                        <td>19-2-2020</td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
+                        <td><span class="badge bg-label-primary me-1">B</span></td>
                       </tr>
                     </tbody>
                   </table>

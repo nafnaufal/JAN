@@ -85,14 +85,13 @@
 
               <form id="formAuthentication" class="mb-3" action="register/save" method="POST">
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
+                  <label for="anak" class="form-label">Nama Anak</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="email"
-                    name="username"
-                    placeholder="Masukkan email"
-                    autofocus
+                    id="anak"
+                    name="anak"
+                    placeholder="Masukkan Nama Anak"
                   />
                 </div>
                 <div class="mb-3 form-password-toggle">
@@ -117,17 +116,6 @@
                     id="hp"
                     name="hp"
                     placeholder="Masukkan No. HP"
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <label for="anak" class="form-label">Nama Anak</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="anak"
-                    name="anak"
-                    placeholder="Masukkan Nama Anak"
                   />
                 </div>
 

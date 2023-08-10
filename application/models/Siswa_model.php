@@ -18,6 +18,25 @@ class Siswa_model extends CI_model {
       'no_hp' => $hp
     ));
   }
+
+  public function update_data() {
+    $id = $_GET['siswa'];
+    $nama = $_POST['nama'];
+    $status = $_POST['status'];
+    $kelas = $_POST['kelas'];
+    $wali = $_POST['wali'];
+    $hp = $_POST['hp'];
+
+    $this->load->database();
+    $this->db->replace('siswa', array(
+      'id' => $id,
+      'nama' => $nama,
+      'status' => $status,
+      'kelas' => $kelas,
+      'wali' => $wali,
+      'no_hp' => $hp
+    ));
+  }
   
   public function get_by_id()
   {

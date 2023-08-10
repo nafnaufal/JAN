@@ -20,6 +20,15 @@
                                     <input type="text" class="form-control" id="nama" name="anak" placeholder="Nama" />
                                 </div>
                             </div>
+                            <div class="row mb-3 form-password-toggle">
+                                <label class="col-sm-2 col-form-label" for="password">Password</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group input-group-merge">
+                                        <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                                        <span class="input-group-text cursor-pointer"><i class="bi bi-eye-slash"></i></span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="tanggal">Tanggal Lahir</label>
                                 <div class="col-sm-10">
