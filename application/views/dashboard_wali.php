@@ -26,6 +26,15 @@
                           1 A
                         </div>
                       </div>
+                      <div class="row">
+                        <div class="col-2">
+                          Status :
+                        </div>
+                        <div class="col-10">
+                          <td><span class="badge bg-label-primary me-1">Lulus</span></td>
+                          <td><span class="badge bg-label-danger me-1">Tidak Lulus</span></td>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
