@@ -93,8 +93,12 @@ class Admin extends CI_Controller
     {
         $this->load->helper('url');
         $this->load->library('session');
+
+        $this->load->model('Siswa_model');
+        $data['data'] = $this->Siswa_model->get_by_id();
+
         $this->load->view('templates/header');
-        $this->load->view('admin/data_siswa/edit');
+        $this->load->view('admin/data_siswa/edit', $data);
         $this->load->view('templates/footer');
     }
     public function saveSiswa()
@@ -107,6 +111,19 @@ class Admin extends CI_Controller
 
         $this->load->model('Siswa_model');
         $this->Siswa_model->save_data();
+
+        redirect(base_url().'admin/data_siswa', 'refresh');
+    }
+    public function updateSiswa()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $this->load->view('templates/header');
+        $this->load->view('admin/data_siswa/edit');
+        $this->load->view('templates/footer');
+
+        $this->load->model('Siswa_model');
+        $this->Siswa_model->update_data();
 
         redirect(base_url().'admin/data_siswa', 'refresh');
     }

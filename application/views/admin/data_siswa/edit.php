@@ -13,35 +13,35 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="<?= base_url() ?>admin/data_siswa/update?siswa=<?= $data->id ?>">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nama">Nama</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="nama" placeholder="Nama" />
+                                    <input type="text" class="form-control" name="nama" id="nama" value="<?= $data->nama ?>" placeholder="Nama" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="status">Status</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="status" placeholder="Status" />
+                                    <input type="text" class="form-control" name="status" id="status" value="<?= $data->status ?>" placeholder="Status" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="kelas">Kelas</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="kelas" placeholder="Kelas" />
+                                    <input type="text" class="form-control" name="kelas" id="kelas" value="<?= $data->kelas ?>" placeholder="Kelas" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="wali">Wali Murid</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="wali" placeholder="Wali Murid" />
+                                    <input type="text" class="form-control" name="wali" id="wali" value="<?= $data->wali ?>" placeholder="Wali Murid" />
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="hp">No HP</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="hp" placeholder="No HP" />
+                                    <input type="number" class="form-control" name="hp" id="hp" value="<?= $data->no_hp ?>" placeholder="No HP" />
                                 </div>
                             </div>
                             <div class="row justify-content-end">
