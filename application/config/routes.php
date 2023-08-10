@@ -74,6 +74,7 @@ $route['admin/data_siswa'] = 'admin/dataSiswa';
 $route['admin/data_siswa/add'] = 'admin/addSiswa';
 $route['admin/data_siswa/edit'] = 'admin/editSiswa';
 $route['admin/data_siswa/save'] = 'admin/saveSiswa';
+$route['admin/data_siswa/update'] = 'admin/updateSiswa';
 
 // Admin Pendaftaran
 $route['admin/pendaftaran'] = 'admin/pendaftaran';

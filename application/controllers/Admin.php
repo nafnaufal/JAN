@@ -93,8 +93,12 @@ class Admin extends CI_Controller
     {
         $this->load->helper('url');
         $this->load->library('session');
+
+        $this->load->model('Siswa_model');
+        $data['data'] = $this->Siswa_model->get_by_id();
+
         $this->load->view('templates/header');
-        $this->load->view('admin/data_siswa/edit');
+        $this->load->view('admin/data_siswa/edit', $data);
         $this->load->view('templates/footer');
     }
     public function saveSiswa()
@@ -107,6 +111,19 @@ class Admin extends CI_Controller
 
         $this->load->model('Siswa_model');
         $this->Siswa_model->save_data();
+
+        redirect(base_url().'admin/data_siswa', 'refresh');
+    }
+    public function updateSiswa()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $this->load->view('templates/header');
+        $this->load->view('admin/data_siswa/edit');
+        $this->load->view('templates/footer');
+
+        $this->load->model('Siswa_model');
+        $this->Siswa_model->update_data();
 
         redirect(base_url().'admin/data_siswa', 'refresh');
     }
@@ -139,6 +156,7 @@ class Admin extends CI_Controller
 		// $anak = $_POST['anak'];
 		// $tanggal_lahir = $_POST['tanggal_lahir'];
 		$this->load->model('Pendaftaran_model');
+		$this->load->model('Akun_model');
 		$this->load->helper('url');
         $this->load->library('session');
 
@@ -149,6 +167,8 @@ class Admin extends CI_Controller
 			: (date("Y") - $birthDate[0]));
 		
 		if($age >= 5) {
+            $_POST['username'] = strtolower(explode(" ", $_POST['anak'])[0]);
+			$this->Akun_model->save_data('wali_murid');
 			$this->Pendaftaran_model->save_data();
 
 			redirect(base_url().'pendaftaran', 'refresh');
