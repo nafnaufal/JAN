@@ -3,6 +3,7 @@
 class Pendaftaran_model extends CI_model {
   public function save_data()
   {
+    $email = $_POST['username'];
     $anak = $_POST['anak'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
     $jk = $_POST['jk'];
@@ -13,6 +14,7 @@ class Pendaftaran_model extends CI_model {
 
     $this->load->database();
     $this->db->insert('pendaftaran', array(
+      'username' => $email,
       'nama' => $anak,
       'tanggal_lahir' => $tanggal_lahir,
       'jk' => $jk,
@@ -26,6 +28,7 @@ class Pendaftaran_model extends CI_model {
   public function update_data()
   {
     $id = $_GET['id'];
+    $email = $_POST['username'];
     $anak = $_POST['anak'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
     $jk = $_POST['jk'];
@@ -37,6 +40,7 @@ class Pendaftaran_model extends CI_model {
     $this->load->database();
     $this->db->replace('pendaftaran', array(
       'id' => $id,
+      'username' => $email,
       'nama' => $anak,
       'tanggal_lahir' => $tanggal_lahir,
       'jk' => $jk,
@@ -65,5 +69,19 @@ class Pendaftaran_model extends CI_model {
     $data = $query->result()[0];
 
     return $data;
+  }
+
+  public function get_by_username()
+  {
+    $this->load->library('session');
+    $username = $this->session->userdata('username');
+    $this->load->database();
+    $this->db->where('username', $username);
+    $query = $this->db->get('pendaftaran');
+    $data = $query->result()[0];
+
+    return $data;
+    
+    // return $username;
   }
 }

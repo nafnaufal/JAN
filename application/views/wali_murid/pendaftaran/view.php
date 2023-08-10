@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Pendaftaran /</span> Detail</h4>
-        <a href="<?php echo base_url(); ?>admin/pendaftaran/add" class="btn btn-primary mb-2">Edit</a>
+        <a href="<?php echo base_url(); ?>wali/pendaftaran/edit" class="btn btn-primary mb-2">Edit</a>
 
         <!-- Basic Layout & Basic with Icons -->
         <div class="row">
@@ -17,43 +17,46 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="nama">Nama Anak</label>
                             <div class="col-sm-10">
-                                <span>Ayam D</span>
+                                <span><?= $data->nama ?></span>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="tanggal">Tanggal Lahir</label>
                             <div class="col-sm-10">
-                                <span>17 April 1000</span>
+                                <span><?php
+                                    $tl = date_create($data->tanggal_lahir);
+                                    echo date_format($tl, 'd F Y');
+                                ?></span>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="kelamin">Jenis Kelamin</label>
                             <div class="col-sm-10">
-                                <span>Wanita</span>
+                                <span><?= $data->jk ?></span>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="ayah">Nama Ayah</label>
                             <div class="col-sm-10">
-                                <span>Itik</span>
+                                <span><?= $data->nama_ayah ?></span>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="ibu">Nama Ibu</label>
                             <div class="col-sm-10">
-                                <span>Bebek</span>
+                                <span><?= $data->nama_ibu ?></span>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="agama">Agama</label>
                             <div class="col-sm-10">
-                                <span>Islam</span>
+                                <span><?= $data->agama ?></span>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="alamat">Alamat</label>
                             <div class="col-sm-10">
-                                <span>Indonesia</span>
+                                <span><?= $data->alamat ?></span>
                             </div>
                         </div>
                     </div>

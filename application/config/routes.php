@@ -105,3 +105,5 @@ $route['guru/ganti_password'] = 'guru/ganti_password';
 // Wali Murid
 $route['wali/dashboard'] = 'wali';
 $route['wali/pendaftaran'] = 'wali/viewPendaftaran';
+$route['wali/pendaftaran/edit'] = 'wali/editPendaftaran';
+$route['wali/pendaftaran/update'] = 'wali/updatePendaftaran';

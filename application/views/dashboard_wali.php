@@ -15,7 +15,7 @@
                           Nama :
                         </div>
                         <div class="col-10">
-                          Naufal
+                          <?= $data->nama ?>
                         </div>
                       </div>
                       <div class="row">
@@ -23,7 +23,11 @@
                           Kelas :
                         </div>
                         <div class="col-10">
-                          1 A
+                          <?php
+                            if($data->status === "Menunggu Pengumuman Kelas") {
+                              echo $data->status;
+                            }
+                          ?>
                         </div>
                       </div>
                       <div class="row">
