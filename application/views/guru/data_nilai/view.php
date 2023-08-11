@@ -42,7 +42,7 @@
                                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $record->id_mapel ?></strong></td>
                                         <td><span><?= $record->nilai ?></span></td>
                                         <td>
-                                            <a class="btn btn-danger" href="<?php echo base_url(); ?>/nilai/delete"><i class="bx bx-trash me-1"></i> Delete</a>
+                                            <a class="btn btn-danger" href="<?php echo base_url(); ?>guru/nilai/delete?id=<?= $record->id ?>&siswa=<?= $siswa->id ?>"><i class="bx bx-trash me-1"></i> Delete</a>
                                         </td>
                                     </tr>
                                     <?php 
