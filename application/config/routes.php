@@ -68,6 +68,7 @@ $route['admin/data_guru/add'] = 'admin/addGuru';
 $route['admin/data_guru/edit'] = 'admin/editGuru';
 $route['admin/data_guru/save'] = 'admin/saveGuru';
 $route['admin/data_guru/update'] = 'admin/updateGuru';
+$route['admin/data_guru/delete'] = 'admin/deleteGuru';
 
 // Admin Data Siswa
 $route['admin/data_siswa'] = 'admin/dataSiswa';
@@ -75,6 +76,7 @@ $route['admin/data_siswa/add'] = 'admin/addSiswa';
 $route['admin/data_siswa/edit'] = 'admin/editSiswa';
 $route['admin/data_siswa/save'] = 'admin/saveSiswa';
 $route['admin/data_siswa/update'] = 'admin/updateSiswa';
+$route['admin/data_siswa/delete'] = 'admin/deleteSiswa';
 
 // Admin Pendaftaran
 $route['admin/pendaftaran'] = 'admin/pendaftaran';
@@ -83,6 +85,7 @@ $route['admin/pendaftaran/edit'] = 'admin/editPendaftaran';
 $route['admin/pendaftaran/view'] = 'admin/viewPendaftaran';
 $route['admin/pendaftaran/save'] = 'admin/savePendaftaran';
 $route['admin/pendaftaran/update'] = 'admin/updatePendaftaran';
+$route['admin/pendaftaran/delete'] = 'admin/deletePendaftaran';
 
 $route['admin/ganti_password'] = 'admin/ganti_password';
 

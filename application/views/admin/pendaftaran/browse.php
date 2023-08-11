@@ -35,7 +35,7 @@
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="<?php echo base_url(); ?>admin/pendaftaran/view?id=<?= $record->id ?>"><i class="bx bx-search-alt me-1"></i> Detail</a>
                                         <a class="dropdown-item" href="<?php echo base_url(); ?>admin/pendaftaran/edit?id=<?= $record->id ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>/pendaftaran/delete?id=<?= $record->id ?>"><i class="bx bx-trash me-1"></i> Delete</a>
+                                        <a class="dropdown-item text-danger" href="<?php echo base_url(); ?>admin/pendaftaran/delete?id=<?= $record->id ?>"><i class="bx bx-trash me-1"></i> Delete</a>
                                     </div>
                                 </div>
                             </td>

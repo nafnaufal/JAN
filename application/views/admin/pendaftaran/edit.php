@@ -15,6 +15,12 @@
                     <div class="card-body">
                         <form method="POST" action="<?= base_url() ?>admin/pendaftaran/update?id=<?= $data->id ?>">
                             <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="username">Username</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="<?= $data->username ?>" readonly/>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nama">Nama Anak</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="nama" name="anak" placeholder="Nama" value="<?= $data->nama ?>" />
