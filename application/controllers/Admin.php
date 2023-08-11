@@ -127,6 +127,16 @@ class Admin extends CI_Controller
 
         redirect(base_url().'admin/data_siswa', 'refresh');
     }
+    public function deleteSiswa()
+    {
+        $this->load->model('Siswa_model');
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->Siswa_model->delete_data();
+
+        redirect(base_url().'admin/data_siswa', 'refresh');
+    }
 
     // Pendaftaran
     public function pendaftaran()
@@ -226,5 +236,15 @@ class Admin extends CI_Controller
         $this->load->view('templates/header');
         $this->load->view('admin/pendaftaran/view', $data);
         $this->load->view('templates/footer');
+    }
+    public function deletePendaftaran()
+    {
+        $this->load->model('Pendaftaran_model');
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->Pendaftaran_model->delete_data();
+
+        redirect(base_url().'admin/pendaftaran', 'refresh');
     }    
 }

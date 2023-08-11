@@ -84,4 +84,15 @@ class Pendaftaran_model extends CI_model {
     
     // return $username;
   }
+
+  public function delete_data() {
+    $id = $_GET['id'];
+    // $hp = $_POST['hp'];
+    // $anak = $_POST['anak'];
+    // $tanggal_lahir = $_POST['tanggal_lahir'];
+
+    $this->load->database();
+    $this->db->where('id', $id);
+    $this->db->delete('pendaftaran');
+  }
 }

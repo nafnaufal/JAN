@@ -17,7 +17,9 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="mapel">Mata Pelajaran</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="mapel" name="mapel" placeholder="Mata Pelajaran" />
+                                    <select class="form-select" id="mapel" name="mapel" aria-label="Mapel">
+                                        <option value="1">Berhitung</option>
+                                    </select>                                
                                 </div>
                             </div>
                             <div class="row mb-3">

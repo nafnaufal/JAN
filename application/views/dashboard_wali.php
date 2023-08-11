@@ -30,7 +30,7 @@
                           ?>
                         </div>
                       </div>
-                      <div class="row">
+                      <!-- <div class="row">
                         <div class="col-2">
                           Status :
                         </div>
@@ -38,23 +38,25 @@
                           <td><span class="badge bg-label-primary me-1">Lulus</span></td>
                           <td><span class="badge bg-label-danger me-1">Tidak Lulus</span></td>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
               </div>
+              <?php
+                if ($data->status === "Menunggu Pengumuman Kelas") {
+              ?>
               <div class="card mb-4">
                 <h5 class="card-header">Pengumuman</h5>
                 <div class="card-body">
-                  Syarat Pendaftaran Ulang:
-                  <br>
-                  1. Bla bla bla
-                  <br>
-                  2. Bla bla bla
-                  <br>
-                  3. Bla bla bla
+                  Untuk keperluan administrasi, silahkan membawa berkas berikut pada saat Pendaftaran Ulang:
+                  <ol>
+                    <li>5 (lima) lembar fotokopi Akta Kelahiran</li>
+                    <li>5 (lima) lembar fotokopi Kartu Keluarga</li>
+                  </ol>
                 </div>
               </div>
+              <?php } else { ?>
               <div class="card mb-4">
                 <div class="table-responsive text-nowrap">
                   <table class="table">
@@ -101,6 +103,7 @@
                   </table>
                 </div>
               </div>
+              <?php } ?>
             </div>
             <!--/ Total Revenue -->
           </div>

@@ -69,7 +69,17 @@ class Guru extends CI_Controller
         $this->load->view('guru/data_nilai/view', $data);
         $this->load->view('templates_guru/footer');
     }
+    public function deleteNilai()
+    {
+        $this->load->model('Nilai_model');
+        $this->load->helper('url');
+        $this->load->library('session');
 
+        $this->Nilai_model->delete_data();
+
+        $id = $_GET['siswa'];
+        redirect(base_url().'guru/nilai/view?siswa='.$id, 'refresh');
+    } 
 
     public function ganti_password()
     {
