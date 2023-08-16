@@ -10,7 +10,7 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <div class="dropdown mb-4">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="semester" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="semester" data-bs-toggle="dropdown" aria-expanded="false">
                                 Tanggal
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="semester">

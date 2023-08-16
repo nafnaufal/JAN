@@ -5,7 +5,7 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
                 <div class="dropdown mb-4">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="semester" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="semester" data-bs-toggle="dropdown" aria-expanded="false">
                     Semester
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="semester">
