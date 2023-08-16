@@ -97,6 +97,7 @@ $route['guru/nilai/edit'] = 'guru/editNilai';
 $route['guru/nilai/view'] = 'guru/viewNilai';
 $route['guru/nilai/save'] = 'guru/saveNilai';
 $route['guru/nilai/delete'] = 'guru/deleteNilai';
+$route['guru/jadwal'] = 'guru/viewJadwal';
 
 // Pendaftaran
 $route['pendaftaran'] = 'admin/pendaftaran';

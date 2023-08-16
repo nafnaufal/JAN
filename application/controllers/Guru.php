@@ -9,7 +9,7 @@ class Guru extends CI_Controller
         $this->load->helper('url');
         $this->load->library('session');
         $this->load->view('templates_guru/header');
-        $this->load->view('dashboard');
+        $this->load->view('dashboard_guru');
         $this->load->view('templates_guru/footer');
     }
     // Data Guru
@@ -67,6 +67,16 @@ class Guru extends CI_Controller
 
         $this->load->view('templates_guru/header');
         $this->load->view('guru/data_nilai/view', $data);
+        $this->load->view('templates_guru/footer');
+    }
+
+    public function viewJadwal()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->load->view('templates_guru/header');
+        $this->load->view('guru/jadwal/view');
         $this->load->view('templates_guru/footer');
     }
     public function deleteNilai()
