@@ -64,6 +64,11 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="<?php echo base_url(); ?>/assets/js/config.js"></script>
+    <style>
+      .ck-editor__editable_inline {
+          min-height: 400px;
+      }
+    </style>
   </head>
 
   <body>
@@ -101,6 +106,12 @@
               <a href="<?php echo base_url(); ?>guru/nilai" class="menu-link">
                 <i class="bi bi-mortarboard-fill mx-1"></i> 
                 <div data-i18n="Analytics">Data Nilai</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="<?php echo base_url(); ?>guru/pengumuman" class="menu-link">
+                <i class="bi bi-mic-fill mx-1"></i> 
+                <div data-i18n="Analytics">Pengumuman</div>
               </a>
             </li>
             <li class="menu-item">
