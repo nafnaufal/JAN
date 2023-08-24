@@ -67,7 +67,7 @@
                   <div class="card">
                     <div class="row row-bordered g-0">
                       <div class="col-md-8">
-                        <h5 class="card-header m-0 me-2 pb-3">Nilai</h5>
+                        <h5 class="card-header m-0 me-2 pb-3">Tingkat kelulusan</h5>
                         <div id="totalRevenueChart" class="px-2"></div>
                       </div>
                       
