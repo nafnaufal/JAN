@@ -12,18 +12,28 @@
   axisColor = config.colors.axisColor;
   borderColor = config.colors.borderColor;
 
+  const chart = document.getElementById('totalRevenueChart');
+  let dataLulus = JSON.parse(chart.dataset.lulus);
+  let dataTidakLulus = JSON.parse(chart.dataset.tidaklulus);
+  let mepelString = chart.dataset.mapel;
+  mepelString = mepelString.replace("[", "");
+  mepelString = mepelString.replace("]", "");
+  mepelString = mepelString.replaceAll("'", "");
+
+  let dataMapel = mepelString.split(",");
+
   // Total Revenue Report Chart - Bar Chart
   // --------------------------------------------------------------------
   const totalRevenueChartEl = document.querySelector('#totalRevenueChart'),
     totalRevenueChartOptions = {
       series: [
         {
-          name: '2022',
-          data: [18, 7, 15, 29, 18, 12, 9]
+          name: 'Lulus',
+          data: dataLulus
         },
         {
-          name: '2020',
-          data: [13, 18, 9, 14, 5, 17, 15]
+          name: 'Tidak Lulus',
+          data: dataTidakLulus
         }
       ],
       chart: {
@@ -78,7 +88,7 @@
         }
       },
       xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        categories: dataMapel,
         labels: {
           style: {
             fontSize: '13px',
