@@ -40,7 +40,24 @@
                                     ?>
                                         <tr>
                                             <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $record->id_mapel ?></strong></td>
-                                            <td><span><?= $record->nilai ?></span></td>
+                                            <td><span><?php 
+                                                switch ($record->nilai) {
+                                                    case 1:
+                                                        echo "Belum Berkembang";
+                                                    break;
+                                                    case 2:
+                                                        echo "Mulai Berkembang";
+                                                    break;
+                                                    case 3:
+                                                        echo "Berkembang Sesuai Harapan";
+                                                    break;
+                                                    case 4:
+                                                        echo "Berkembang Sangat Baik";
+                                                    break;
+                                                    default:
+                                                        echo "Error";
+                                                }
+                                            ?></span></td>
                                             <td>
                                                 <a class="btn btn-danger" href="#" onclick="deleteItem()"><i class="bx bx-trash me-1"></i> Delete</a>
                                             </td>
