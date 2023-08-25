@@ -24,7 +24,7 @@ class Guru extends CI_Controller
         // // var_dump($data['data']);
 
         $this->load->view('templates_guru/header');
-        $this->load->view('dashboard', $data);
+        $this->load->view('dashboard');
         $this->load->view('templates_guru/footer');
     }
     // Data Guru
