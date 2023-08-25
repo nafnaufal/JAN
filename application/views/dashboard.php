@@ -54,10 +54,7 @@
                     <div class="row row-bordered g-0">
                       <div class="col-md-8">
                         <h5 class="card-header m-0 me-2 pb-3">Tingkat kelulusan</h5>
-                        <div id="totalRevenueChart" class="px-2" 
-                            data-lulus="[10, 7, 15, 29, 18, 12, 9]"  
-                            data-tidaklulus="[10, 12, 11, 1, 5, 7, 15]"
-                            data-mapel="['Matematika', 'English', 'PKN', 'Olahraga', 'TI', 'IPA', 'IPS']"></div>
+                        <div id="totalRevenueChart" class="px-2" data-lulus="[10, 7, 15, 29, 18, 12, 9]" data-tidaklulus="[10, 12, 11, 1, 5, 7, 15]" data-mapel="['Matematika', 'English', 'PKN', 'Olahraga', 'TI', 'IPA', 'IPS']"></div>
                       </div>
 
                     </div>
@@ -73,3 +70,8 @@
             <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->
+
+          <script>
+            var data = <?php echo json_encode($data); ?>;
+            console.log(data);
+          </script>

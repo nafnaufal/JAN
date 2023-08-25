@@ -23,12 +23,28 @@ class Nilai_model extends CI_model {
     return $data;
    }
   
+   public function get_mapel() {
+    $this->load->database();
+    $query = $this->db->get('mapel');
+    $data = $query->result();
+    return $data;
+   }
+  
    public function get_data_by_siswa() {
     $siswa = $_GET['siswa'];
 
     $this->load->database();
     $this->db->where('id_siswa', $siswa);
     $query = $this->db->get('nilai');
+    $data = $query->result();
+
+    return $data;
+   }
+   
+   public function get_data_grafik() {
+
+    $this->load->database();
+    $query = $this->db->query("SELECT nama_mapel, COUNT(*) as jumlah, CASE WHEN nilai > 1 THEN 'lulus' ELSE 'tidak_lulus' END AS kelulusan FROM nilai LEFT JOIN mapel ON nilai.id_mapel = mapel.id GROUP BY kelulusan, id_mapel;");
     $data = $query->result();
 
     return $data;
