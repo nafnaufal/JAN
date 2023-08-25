@@ -13,7 +13,7 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="<?= base_url() ?>admin/pendaftaran/save">
+                        <form method="POST" action="<?= base_url() ?>admin/pendaftaran/save" onsubmit="submitItem(event)">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="nama">Nama Anak</label>
                                 <div class="col-sm-10">
@@ -91,5 +91,41 @@
     </div>
     <!-- / Content -->
 
+    <script>
+        function submitItem(event) {
+            if (ageCalculator() < 5) {
+                event.preventDefault();
 
+                Swal.fire({
+                    title: 'Usia Anak Belum 5 Tahun!',
+                    icon: 'warning',
+                });
+            } else {
+                Swal.fire({
+                    title: 'Data Tersimpan',
+                    icon: 'success',
+                });
+            }
+        }
+
+        function ageCalculator() {
+            var userinput = document.getElementById("tanggal").value;
+            var dob = new Date(userinput);
+
+            //calculate month difference from current date in time  
+            var month_diff = Date.now() - dob.getTime();
+
+            //convert the calculated difference in date format  
+            var age_dt = new Date(month_diff);
+
+            //extract year from date      
+            var year = age_dt.getUTCFullYear();
+
+            //now calculate the age of the user  
+            var age = Math.abs(year - 1970);
+
+            //display the calculated age  
+            return age;
+        }
+    </script>
 </div>

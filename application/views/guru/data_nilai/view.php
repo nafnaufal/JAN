@@ -36,17 +36,17 @@
                                 </thead>
                                 <tbody class="table-border-bottom-0">
                                     <?php
-                                        foreach ($nilai as $record) {
+                                    foreach ($nilai as $record) {
                                     ?>
-                                    <tr>
-                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $record->id_mapel ?></strong></td>
-                                        <td><span><?= $record->nilai ?></span></td>
-                                        <td>
-                                            <a class="btn btn-danger" href="<?php echo base_url(); ?>guru/nilai/delete?id=<?= $record->id ?>&siswa=<?= $siswa->id ?>"><i class="bx bx-trash me-1"></i> Delete</a>
-                                        </td>
-                                    </tr>
-                                    <?php 
-                                        }
+                                        <tr>
+                                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $record->id_mapel ?></strong></td>
+                                            <td><span><?= $record->nilai ?></span></td>
+                                            <td>
+                                                <a class="btn btn-danger" href="#" onclick="deleteItem()"><i class="bx bx-trash me-1"></i> Delete</a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
                                     ?>
                                 </tbody>
                             </table>
@@ -58,5 +58,27 @@
     </div>
     <!-- / Content -->
 
-
+    <script>
+        function deleteItem() {
+            Swal.fire({
+                title: 'Hapus Data?',
+                // text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Data Dihapus'
+                    ).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = "<?php echo base_url(); ?>guru/nilai/delete?id=<?= $record->id ?>&siswa=<?= $siswa->id ?>";
+                        }
+                    })
+                }
+            })
+        }
+    </script>
 </div>
