@@ -13,7 +13,7 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="<?= base_url() ?>wali/pendaftaran/update?id=<?= $data->id ?>">
+                        <form method="POST" action="<?= base_url() ?>wali/pendaftaran/update?id=<?= $data->id ?>" onsubmit="submitItem(event)">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="anak">Nama Anak</label>
                                 <div class="col-sm-10">
@@ -36,8 +36,12 @@
                                 <label class="col-sm-2 col-form-label" for="kelamin">Jenis Kelamin</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" id="kelamin" name="jk" aria-label="Jenis Kelamin">
-                                        <option value="Laki-Laki" <?php if($data->jk === "Laki-Laki"){ echo "selected";} ?>>Laki-Laki</option>
-                                        <option value="Perempuan" <?php if($data->jk === "Perempuan"){ echo "selected";} ?>>Perempuan</option>
+                                        <option value="Laki-Laki" <?php if ($data->jk === "Laki-Laki") {
+                                                                        echo "selected";
+                                                                    } ?>>Laki-Laki</option>
+                                        <option value="Perempuan" <?php if ($data->jk === "Perempuan") {
+                                                                        echo "selected";
+                                                                    } ?>>Perempuan</option>
                                     </select>
                                 </div>
                             </div>
@@ -55,17 +59,31 @@
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="agama">Agama</label>
-                                    <div class="col-sm-10">
-                                        <select class="form-select" id="agama" name="agama" aria-label="Agama">
-                                            <option value="Islam" <?php if($data->agama === "Islam"){ echo "selected";} ?>>Islam</option>
-                                            <option value="Katolik" <?php if($data->agama === "Katolik"){ echo "selected";} ?>>Katolik</option>
-                                            <option value="Protestan" <?php if($data->agama === "Protestan"){ echo "selected";} ?>>Protestan</option>
-                                            <option value="Hindu" <?php if($data->agama === "Hindu"){ echo "selected";} ?>>Hindu</option>
-                                            <option value="Budha" <?php if($data->agama === "Budha"){ echo "selected";} ?>>Budha</option>
-                                            <option value="Konghucu" <?php if($data->agama === "Konghucu"){ echo "selected";} ?>>Konghucu</option>
-                                            <option value="Lainnya" <?php if($data->agama === "Lainnya"){ echo "selected";} ?>>Lainnya</option>
-                                        </select>
-                                    </div>
+                                <div class="col-sm-10">
+                                    <select class="form-select" id="agama" name="agama" aria-label="Agama">
+                                        <option value="Islam" <?php if ($data->agama === "Islam") {
+                                                                    echo "selected";
+                                                                } ?>>Islam</option>
+                                        <option value="Katolik" <?php if ($data->agama === "Katolik") {
+                                                                    echo "selected";
+                                                                } ?>>Katolik</option>
+                                        <option value="Protestan" <?php if ($data->agama === "Protestan") {
+                                                                        echo "selected";
+                                                                    } ?>>Protestan</option>
+                                        <option value="Hindu" <?php if ($data->agama === "Hindu") {
+                                                                    echo "selected";
+                                                                } ?>>Hindu</option>
+                                        <option value="Budha" <?php if ($data->agama === "Budha") {
+                                                                    echo "selected";
+                                                                } ?>>Budha</option>
+                                        <option value="Konghucu" <?php if ($data->agama === "Konghucu") {
+                                                                        echo "selected";
+                                                                    } ?>>Konghucu</option>
+                                        <option value="Lainnya" <?php if ($data->agama === "Lainnya") {
+                                                                    echo "selected";
+                                                                } ?>>Lainnya</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="alamat">Alamat</label>
@@ -86,5 +104,41 @@
     </div>
     <!-- / Content -->
 
+    <script>
+        function submitItem(event) {
+            if (ageCalculator() < 5) {
+                event.preventDefault();
 
+                Swal.fire({
+                    title: 'Usia Anak Belum 5 Tahun!',
+                    icon: 'warning',
+                });
+            } else {
+                Swal.fire({
+                    title: 'Data Tersimpan',
+                    icon: 'success',
+                });
+            }
+        }
+
+        function ageCalculator() {
+            var userinput = document.getElementById("tanggal_lahir").value;
+            var dob = new Date(userinput);
+
+            //calculate month difference from current date in time  
+            var month_diff = Date.now() - dob.getTime();
+
+            //convert the calculated difference in date format  
+            var age_dt = new Date(month_diff);
+
+            //extract year from date      
+            var year = age_dt.getUTCFullYear();
+
+            //now calculate the age of the user  
+            var age = Math.abs(year - 1970);
+
+            //display the calculated age  
+            return age;
+        }
+    </script>
 </div>

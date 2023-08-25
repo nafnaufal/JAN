@@ -51,5 +51,12 @@
     </div>
     <!-- / Content -->
 
-
+    <script>
+        function submitItem() {
+            Swal.fire({
+                title: 'Data Disimpan',
+                icon: 'success',
+            })
+        }
+    </script>   
 </div>

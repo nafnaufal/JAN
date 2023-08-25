@@ -13,7 +13,7 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="<?= base_url() ?>guru/nilai/save">
+                        <form method="POST" action="<?= base_url() ?>guru/nilai/save" onsubmit="submitItem()">
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="mapel">Mata Pelajaran</label>
                                 <div class="col-sm-10">
@@ -62,5 +62,12 @@
     </div>
     <!-- / Content -->
 
-
+    <script>
+        function submitItem() {
+            Swal.fire({
+                title: 'Data Disimpan',
+                icon: 'success',
+            })
+        }
+    </script>                                        
 </div>

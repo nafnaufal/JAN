@@ -83,7 +83,7 @@
               <!-- /Logo -->
               <h4 class="mb-2">Sistem Informasi Akademik TK KB</h4>
 
-              <form id="formAuthentication" class="mb-3" action="register/save" method="POST">
+              <form id="formAuthentication" class="mb-3" action="register/save" method="POST" onsubmit="submitItem(event)">
                 <div class="mb-3">
                   <label for="anak" class="form-label">Nama Anak</label>
                   <input
@@ -182,7 +182,43 @@
         </div>
       </div>
     </div>
+    <script>
+        function submitItem(event) {
+            if (ageCalculator() < 5) {
+                event.preventDefault();
 
+                Swal.fire({
+                    title: 'Usia Anak Belum 5 Tahun!',
+                    icon: 'warning',
+                });
+            } else {
+                Swal.fire({
+                    title: 'Data Tersimpan',
+                    icon: 'success',
+                });
+            }
+        }
+
+        function ageCalculator() {
+            var userinput = document.getElementById("tanggal_lahir").value;
+            var dob = new Date(userinput);
+
+            //calculate month difference from current date in time  
+            var month_diff = Date.now() - dob.getTime();
+
+            //convert the calculated difference in date format  
+            var age_dt = new Date(month_diff);
+
+            //extract year from date      
+            var year = age_dt.getUTCFullYear();
+
+            //now calculate the age of the user  
+            var age = Math.abs(year - 1970);
+
+            //display the calculated age  
+            return age;
+        }
+    </script>
     <!-- / Content -->
 
 
