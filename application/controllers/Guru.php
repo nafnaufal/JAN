@@ -8,9 +8,24 @@ class Guru extends CI_Controller
     {
         $this->load->helper('url');
         $this->load->library('session');
-        $this->load->view('templates_guru/header');
-        $this->load->view('dashboard');
-        $this->load->view('templates_guru/footer');
+
+        $this->load->model('Nilai_model');
+
+        $mapel = $this->Nilai_model->get_mapel();
+        $all = $this->Nilai_model->get_data_grafik();
+
+        // foreach ($mapel as $dt) {
+        //     echo $dt->nama_mapel;
+
+        //     foreach ($all
+        // }
+        // $data['data'] = $this->Nilai_model->get_data_grafik();
+        
+        // // var_dump($data['data']);
+
+        // $this->load->view('templates_guru/header');
+        // $this->load->view('dashboard', $data);
+        // $this->load->view('templates_guru/footer');
     }
     // Data Guru
     public function dataNilai()
