@@ -40,12 +40,10 @@
                                 <label class="col-sm-2 col-form-label" for="nilai">Nilai</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" id="nilai" name="nilai" aria-label="Nilai">
-                                        <option value="A" selected>A</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B">B</option>
-                                        <option value="C+">C+</option>
-                                        <option value="C">C</option>
-                                        <option value="D">D</option>
+                                        <option value="1" selected>Belum Berkembang</option>
+                                        <option value="2">Mulai Berkembang</option>
+                                        <option value="3">Berkembang Sesuai Harapan</option>
+                                        <option value="4">Berkembang Sangat Baik</option>
                                     </select>
                                 </div>
                             </div>
