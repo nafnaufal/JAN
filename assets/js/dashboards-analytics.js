@@ -16,11 +16,11 @@
   let dataLulus = JSON.parse(chart.dataset.lulus);
   let dataTidakLulus = JSON.parse(chart.dataset.tidaklulus);
   let mepelString = chart.dataset.mapel;
-  mepelString = mepelString.replace("[", "");
-  mepelString = mepelString.replace("]", "");
-  mepelString = mepelString.replaceAll("'", "");
+  console.log(chart.dataset.mapel);
+  mepelString = mepelString.replaceAll('"', "");
 
   let dataMapel = mepelString.split(",");
+
 
   // Total Revenue Report Chart - Bar Chart
   // --------------------------------------------------------------------

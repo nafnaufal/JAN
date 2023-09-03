@@ -47,7 +47,7 @@ class Guru extends CI_Controller
         }
         // $data['data'] = $this->Nilai_model->get_data_grafik();
 
-        $mapel_string = "[";
+        $mapel_string = "";
         $lulus_string = "[";
         $tidak_lulus_string = "[";
 
@@ -61,7 +61,7 @@ class Guru extends CI_Controller
         // print_r($mapel_string);
 
         
-        $data['mapel'] = substr_replace($mapel_string, "", -1)."]";
+        $data['mapel'] = substr_replace($mapel_string, "", -1);
         $data['lulus'] = substr_replace($lulus_string, "", -1) . "]";
         $data['tidak_lulus'] = substr_replace($tidak_lulus_string, "", -1) . "]";
 

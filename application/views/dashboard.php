@@ -2,6 +2,10 @@
           <div class="content-wrapper">
             <!-- Content -->
 
+            <?php
+    echo $mapel;
+            ?>
+
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
                 <div class="col-lg-4 col-md-4 order-1">
@@ -55,7 +59,7 @@
                       <div class="col-md-8">
                         <h5 class="card-header m-0 me-2 pb-3">Tingkat kelulusan</h5>
 
-                        <div id="totalRevenueChart" class="px-2" data-lulus="<?= $lulus ?>" data-tidaklulus="<?= $tidak_lulus ?>" data-mapel="<?= $mapel ?>"></div>
+                        <div id="totalRevenueChart" class="px-2" data-lulus="<?= $lulus ?>" data-tidaklulus="<?= $tidak_lulus ?>" data-mapel='<?= $mapel ?>'></div>
                       </div>
 
                     </div>
