@@ -14,17 +14,59 @@ class Guru extends CI_Controller
         $mapel = $this->Nilai_model->get_mapel();
         $all = $this->Nilai_model->get_data_grafik();
 
-        // foreach ($mapel as $dt) {
-        //     echo $dt->nama_mapel;
+        $mapel_grafik = array();
+        $lulus_grafik = array();
+        $tidak_lulus_grafik = array();
 
-        //     foreach ($all
-        // }
+        foreach ($mapel as $dt) {
+            $temp = $dt->nama_mapel;
+            $lulus = false;
+            $tidak_lulus = false;
+
+            array_push($mapel_grafik, $temp);
+
+            foreach ($all as $nilai){
+                if($temp == $nilai->nama_mapel){
+                    if($nilai->kelulusan == "lulus"){
+                        array_push($lulus_grafik, $nilai->jumlah);
+                        $lulus = true;
+                    }
+                    else{
+                        array_push($tidak_lulus_grafik, $nilai->jumlah);
+                        $tidak_lulus = true;
+                    }
+                }
+            }
+
+            if($tidak_lulus == false){
+                array_push($tidak_lulus_grafik, 0);
+            }
+            if($lulus == false){
+                array_push($lulus_grafik, 0);
+            }
+        }
         // $data['data'] = $this->Nilai_model->get_data_grafik();
+
+        $mapel_string = "[";
+        $lulus_string = "[";
+        $tidak_lulus_string = "[";
+
+        $length = count($mapel_grafik);
+        for ($i = 0; $i < $length; $i++) {
+            $mapel_string .= '"'. $mapel_grafik[$i].'",';
+            $lulus_string .= $lulus_grafik[$i] . ',';
+            $tidak_lulus_string .= $tidak_lulus_grafik[$i] . ',';
+            
+        }
+        // print_r($mapel_string);
+
         
-        // // var_dump($data['data']);
+        $data['mapel'] = substr_replace($mapel_string, "", -1)."]";
+        $data['lulus'] = substr_replace($lulus_string, "", -1) . "]";
+        $data['tidak_lulus'] = substr_replace($tidak_lulus_string, "", -1) . "]";
 
         $this->load->view('templates_guru/header');
-        $this->load->view('dashboard');
+        $this->load->view('dashboard', $data);
         $this->load->view('templates_guru/footer');
     }
     // Data Guru
