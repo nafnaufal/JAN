@@ -17,7 +17,7 @@
   class="light-style customizer-hide"
   dir="ltr"
   data-theme="theme-default"
-  data-assets-path="<?php echo base_url();?>/assets/"
+  data-assets-path="<?php echo base_url(); ?>/assets/"
   data-template="vertical-menu-template-free"
 >
   <head>
@@ -76,8 +76,10 @@
             <div class="card-body">
               <!-- Logo -->
               <div class="app-brand justify-content-center">
-                <a href="index.html" class="app-brand-link gap-2">
-                  <span class="app-brand-text demo text-body fw-bolder">SIATKKB</span>
+                <a href="#" class="app-brand-link gap-2">
+                  <span>
+                      <img src="<?php echo base_url(); ?>/assets/img/logo-jan.png" alt="logo" height="50px">
+                  </span>
                 </a>
               </div>
               <!-- /Logo -->
