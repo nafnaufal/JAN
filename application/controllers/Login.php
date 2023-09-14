@@ -30,6 +30,18 @@ class Login extends CI_Controller {
         $this->session->set_userdata('name', $data->nama);
         redirect(base_url().'guru/dashboard', 'refresh');
       }elseif ($akun->role === 'wali_murid') {
+        $this->load->model('Pendaftaran_model');
+        $this->load->model('Siswa_model');
+        $data = $this->Siswa_model->get_by_username($akun->username);
+        // var_dump($data);
+        if($data === null){
+          $data = $this->Pendaftaran_model->get_by_username_($akun->username);
+          $this->session->set_userdata('name', $data->nama_ayah);
+        }else{
+          $this->session->set_userdata('name', $data->wali);
+        }
+        
+        $this->session->set_userdata('role', 'Wali Murid');
         redirect(base_url().'wali/dashboard', 'refresh');
       }elseif ($akun->role === 'admin') {
         $this->session->set_userdata('name', 'Admin TK');

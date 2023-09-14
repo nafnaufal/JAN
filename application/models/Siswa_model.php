@@ -50,6 +50,16 @@ class Siswa_model extends CI_model {
     return $data;
   }
 
+  public function get_by_username($username)
+  {
+    $this->load->database();
+    $this->db->where('username', $username);
+    $query = $this->db->get('siswa');
+    $data = $query->result()[0];
+
+    return $data;
+  }
+
   public function get_all() {
     $this->load->database();
     $query = $this->db->get('siswa');

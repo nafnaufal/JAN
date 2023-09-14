@@ -85,6 +85,20 @@ class Pendaftaran_model extends CI_model {
     // return $username;
   }
 
+  public function get_by_username_($username)
+  {
+    $this->load->library('session');
+
+    $this->load->database();
+    $this->db->where('username', $username);
+    $query = $this->db->get('pendaftaran');
+    $data = $query->result()[0];
+
+    return $data;
+    
+    // return $username;
+  }
+
   public function delete_data() {
     $id = $_GET['id'];
     // $hp = $_POST['hp'];
