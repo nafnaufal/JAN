@@ -116,6 +116,12 @@
                 <div data-i18n="Analytics">Pendaftaran</div>
               </a>
             </li>
+            <li class="menu-item">
+              <a href="<?php echo base_url(); ?>admin/mapel" class="menu-link">
+                <i class="bi bi-book-half mx-1"></i> 
+                <div data-i18n="Analytics">Mapel</div>
+              </a>
+            </li>
           </ul>
         </aside>
         <!-- / Menu -->

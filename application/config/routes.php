@@ -87,6 +87,12 @@ $route['admin/pendaftaran/save'] = 'admin/savePendaftaran';
 $route['admin/pendaftaran/update'] = 'admin/updatePendaftaran';
 $route['admin/pendaftaran/delete'] = 'admin/deletePendaftaran';
 
+// Admin Mapel
+$route['admin/mapel'] = 'admin/mapel';
+$route['admin/mapel/add'] = 'admin/addMapel';
+$route['admin/mapel/delete'] = 'admin/deleteMapel';
+$route['admin/jadwal/add'] = 'admin/addJadwal';
+
 $route['admin/ganti_password'] = 'admin/ganti_password';
 
 // Guru
