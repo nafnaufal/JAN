@@ -1,11 +1,6 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-
-            <?php
-    echo $mapel;
-            ?>
-
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
                 <div class="col-lg-4 col-md-4 order-1">

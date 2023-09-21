@@ -1,7 +1,7 @@
 <!-- Content wrapper -->
 <div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Pendaftaran /</span> Add</h4>
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Jadwal /</span> Add</h4>
 
         <!-- Basic Layout & Basic with Icons -->
         <div class="row">
@@ -13,11 +13,17 @@
                         <!-- <small class="text-muted float-end">Add</small> -->
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="<?= base_url() ?>wali/pendaftaran/update?id=<?= $data->id ?>" onsubmit="submitItem(event)">
+                        <form method="POST" action="#">
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="tanggal">Tanggal</label>
+                                <label class="col-sm-2 col-form-label" for="hari">Hari</label>
                                 <div class="col-sm-10">
-                                    <input type="date" class="form-control" id="tanggal" name="tanggal" />
+                                    <select class="form-select" name="hari" id="hari">
+                                        <option value="1">Senin</option>
+                                        <option value="2">Selasa</option>
+                                        <option value="3">Rabu</option>
+                                        <option value="4">Kamis</option>
+                                        <option value="5">Jumat</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -36,16 +42,9 @@
                                 <label class="col-sm-2 col-form-label" for="mapel">Mata Pelajaran</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" id="mapel" name="mapel" aria-label="mapel">
-                                        <option value="Berhitung" <?php
-                                                                    // if ($data->jk === "Laki-Laki") {
-                                                                    //     echo "selected";
-                                                                    // }
-                                                                    ?>>Berhitung</option>
-                                        <option value="Menulis" <?php
-                                                                // if ($data->jk === "Laki-Laki") {
-                                                                //     echo "selected";
-                                                                // }
-                                                                ?>>Menulis</option>
+                                        <?php foreach ($mapel as $x) { ?>
+                                            <option value="<?= $x->id ?>"><?= $x->nama_mapel ?></option>
+                                        <?php } ?>
                                     </select>
                                 </div>
                             </div>
@@ -65,11 +64,12 @@
                                 <label class="col-sm-2 col-form-label" for="guru">Guru</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" id="guru" name="guru" aria-label="guru">
-                                        <option value="Guru A" <?php
-                                                                // if ($data->jk === "Laki-Laki") {
-                                                                //     echo "selected";
-                                                                // }
-                                                                ?>>Guru A</option>
+                                        <?php
+                                        foreach ($guru as $x) {
+
+                                        ?>
+                                            <option value="<?= $x->id ?>"><?= $x->nama ?></option>
+                                        <?php } ?>
                                     </select>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
 
                             <div class="row justify-content-end">
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-primary">Edit</button>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
                                 </div>
                             </div>
                         </form>

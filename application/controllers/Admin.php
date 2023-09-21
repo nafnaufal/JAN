@@ -246,5 +246,61 @@ class Admin extends CI_Controller
         $this->Pendaftaran_model->delete_data();
 
         redirect(base_url().'admin/pendaftaran', 'refresh');
-    }    
+    }
+    public function mapel()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->load->model('Mapel_model');
+        $data['data'] = $this->Mapel_model->get_all_mapel();
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/jadwal/browse', $data);
+        $this->load->view('templates/footer');
+    }
+    public function addMapel()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/jadwal/add_mapel');
+        $this->load->view('templates/footer');
+    }
+    public function deleteMapel()
+    {
+        $this->load->model('Mapel_model');
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->Mapel_model->delete_data();
+
+        redirect(base_url() . 'admin/mapel', 'refresh');
+    }
+    public function addJadwal()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->load->model('Guru_model');
+        $data['guru'] = $this->Guru_model->get_all_guru();
+        $this->load->model('Mapel_model');
+        $data['mapel'] = $this->Mapel_model->get_all_mapel();
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/jadwal/add', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function viewMapel()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/jadwal/viewMapel');
+        $this->load->view('templates/footer');
+    }
 }
