@@ -292,4 +292,15 @@ class Admin extends CI_Controller
         $this->load->view('admin/jadwal/add', $data);
         $this->load->view('templates/footer');
     }
+
+    public function viewMapel()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/jadwal/viewMapel');
+        $this->load->view('templates/footer');
+    }
 }
