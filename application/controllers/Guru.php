@@ -126,6 +126,15 @@ class Guru extends CI_Controller
         $this->load->view('guru/data_nilai/view', $data);
         $this->load->view('templates_guru/footer');
     }
+    public function jadwal()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->load->view('templates_guru/header');
+        $this->load->view('guru/jadwal/browse');
+        $this->load->view('templates_guru/footer');
+    }
     public function deleteNilai()
     {
         $this->load->model('Nilai_model');

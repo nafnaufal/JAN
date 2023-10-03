@@ -90,6 +90,7 @@ $route['admin/pendaftaran/delete'] = 'admin/deletePendaftaran';
 // Admin Mapel
 $route['admin/mapel'] = 'admin/mapel';
 $route['admin/mapel/add'] = 'admin/addMapel';
+$route['admin/mapel/save'] = 'admin/saveMapel';
 $route['admin/mapel/delete'] = 'admin/deleteMapel';
 $route['admin/jadwal/add'] = 'admin/addJadwal';
 $route['admin/jadwal/view'] = 'admin/viewMapel';
@@ -105,6 +106,7 @@ $route['guru/nilai/view'] = 'guru/viewNilai';
 $route['guru/nilai/save'] = 'guru/saveNilai';
 $route['guru/nilai/delete'] = 'guru/deleteNilai';
 $route['guru/pengumuman'] = 'guru/pengumuman';
+$route['guru/jadwal'] = 'guru/jadwal';
 
 // Pendaftaran
 $route['pendaftaran'] = 'admin/pendaftaran';

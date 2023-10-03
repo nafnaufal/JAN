@@ -10,6 +10,14 @@ class Mapel_model extends CI_model {
         return $mapel;
     }
 
+    public function save() {
+        $nama = $this->input->post('nama');
+        $this->load->database();
+        $this->db->insert('mapel', array(
+            'nama_mapel' => $nama,
+        ));
+    }
+
     public function delete_data()
     {
         $id = $_GET['id'];

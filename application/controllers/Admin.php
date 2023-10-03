@@ -268,6 +268,15 @@ class Admin extends CI_Controller
         $this->load->view('admin/jadwal/add_mapel');
         $this->load->view('templates/footer');
     }
+    public function saveMapel() {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->load->model('Mapel_model');
+        $this->Mapel_model->save();
+
+        redirect(base_url() . 'admin/mapel', 'refresh');
+    }
     public function deleteMapel()
     {
         $this->load->model('Mapel_model');

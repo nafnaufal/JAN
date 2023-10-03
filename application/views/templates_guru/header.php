@@ -110,6 +110,12 @@
               </a>
             </li>
             <li class="menu-item">
+              <a href="<?php echo base_url(); ?>guru/jadwal" class="menu-link">
+                <i class="bi bi-book-half mx-1"></i> 
+                <div data-i18n="Analytics">Jadwal</div>
+              </a>
+            </li>
+            <li class="menu-item">
               <a href="<?php echo base_url(); ?>guru/pengumuman" class="menu-link">
                 <i class="bi bi-mic-fill mx-1"></i> 
                 <div data-i18n="Analytics">Pengumuman</div>

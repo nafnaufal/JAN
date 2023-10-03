@@ -52,4 +52,13 @@ class Wali extends CI_Controller
 
         redirect(base_url().'wali/pendaftaran', 'refresh');
     }
+    public function jadwal()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->load->view('templates_wali/header');
+        $this->load->view('wali_murid/jadwal/view');
+        $this->load->view('templates_wali/footer');
+    }
 }

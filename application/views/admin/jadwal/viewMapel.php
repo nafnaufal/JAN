@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Jadwal /</span> Detail</h4>
-        <a href="<?php echo base_url(); ?>admin/mapel/addJadwal" class="btn btn-primary mb-2">Add</a>
+        <a href="<?php echo base_url(); ?>admin/jadwal/add" class="btn btn-primary mb-2">Add</a>
 
         <!-- Basic Layout & Basic with Icons -->
         <div class="row">
