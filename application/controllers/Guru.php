@@ -146,12 +146,5 @@ class Guru extends CI_Controller
         $this->load->view('guru/ganti_password/edit');
         $this->load->view('templates_guru/footer');
     }
-    public function pengumuman()
-    {
-        $this->load->helper('url');
-        $this->load->library('session');
-        $this->load->view('templates_guru/header');
-        $this->load->view('guru/pengumuman/add');
-        $this->load->view('templates_guru/footer');
-    }
+
 }

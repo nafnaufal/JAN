@@ -109,12 +109,7 @@
                 <div data-i18n="Analytics">Data Nilai</div>
               </a>
             </li>
-            <li class="menu-item">
-              <a href="<?php echo base_url(); ?>guru/pengumuman" class="menu-link">
-                <i class="bi bi-mic-fill mx-1"></i> 
-                <div data-i18n="Analytics">Pengumuman</div>
-              </a>
-            </li>
+            
             <li class="menu-item">
               <a href="<?php echo base_url(); ?>guru/ganti_password" class="menu-link">
                 <i class="bi bi-eye-fill mx-1"></i> 

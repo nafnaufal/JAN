@@ -268,6 +268,16 @@ class Admin extends CI_Controller
         $this->load->view('admin/jadwal/add_mapel');
         $this->load->view('templates/footer');
     }
+    
+    public function editMapel()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/jadwal/edit_mapel');
+        $this->load->view('templates/footer');
+    }
     public function deleteMapel()
     {
         $this->load->model('Mapel_model');
@@ -301,6 +311,14 @@ class Admin extends CI_Controller
 
         $this->load->view('templates/header');
         $this->load->view('admin/jadwal/viewMapel');
+        $this->load->view('templates/footer');
+    }
+    public function pengumuman()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $this->load->view('templates/header');
+        $this->load->view('admin/pengumuman/add');
         $this->load->view('templates/footer');
     }
 }

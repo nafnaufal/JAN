@@ -65,6 +65,11 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="<?php echo base_url(); ?>/assets/js/config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      .ck-editor__editable_inline {
+          min-height: 400px;
+      }
+    </style>
   </head>
 
   <body>
@@ -114,6 +119,12 @@
               <a href="<?php echo base_url(); ?>admin/pendaftaran" class="menu-link">
                 <i class="bi bi-clipboard-check-fill mx-1"></i> 
                 <div data-i18n="Analytics">Pendaftaran</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="<?php echo base_url(); ?>admin/pengumuman" class="menu-link">
+                <i class="bi bi-mic-fill mx-1"></i> 
+                <div data-i18n="Analytics">Pengumuman</div>
               </a>
             </li>
             <li class="menu-item">

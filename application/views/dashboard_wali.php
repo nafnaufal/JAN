@@ -44,65 +44,45 @@
                 </div>
               </div>
               <?php
-                if ($data->status === "Menunggu Pengumuman Kelas") {
+              if ($data->status === "Menunggu Pengumuman Kelas") {
               ?>
-              <div class="card mb-4">
-                <h5 class="card-header">Pengumuman</h5>
-                <div class="card-body">
-                  Untuk keperluan administrasi, silahkan membawa berkas berikut pada saat Pendaftaran Ulang:
-                  <ol>
-                    <li>5 (lima) lembar fotokopi Akta Kelahiran</li>
-                    <li>5 (lima) lembar fotokopi Kartu Keluarga</li>
-                  </ol>
+                <div class="card mb-4">
+                  <h5 class="card-header">Pengumuman</h5>
+                  <div class="card-body">
+                    Untuk keperluan administrasi, silahkan membawa berkas berikut pada saat Pendaftaran Ulang:
+                    <ol>
+                      <li>5 (lima) lembar fotokopi Akta Kelahiran</li>
+                      <li>5 (lima) lembar fotokopi Kartu Keluarga</li>
+                    </ol>
+                  </div>
                 </div>
-              </div>
               <?php } else { ?>
-              <div class="card mb-4">
-                <div class="table-responsive text-nowrap">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Tanggal</th>
-                        <th>Mata Pelajaran</th>
-                        <th>Nilai</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0">
-                      <tr>
-                        <td>19-2-2020</td>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
-                        <td><span class="badge bg-label-primary me-1">B</span></td>
-                        <td>
-                          <button type="button" class="btn btn-primary">
-                            Detail
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>19-2-2020</td>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
-                        <td><span class="badge bg-label-primary me-1">B</span></td>
-                        <td>
-                          <button type="button" class="btn btn-primary">
-                            Detail
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>19-2-2020</td>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
-                        <td><span class="badge bg-label-primary me-1">B</span></td>
-                        <td>
-                          <button type="button" class="btn btn-primary">
-                            Detail
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="card mb-4">
+                  <div class="table-responsive text-nowrap">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Tanggal</th>
+                          <th>Mata Pelajaran</th>
+                          <th>Nilai</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0">
+                        <tr>
+                          <td>19-2-2020</td>
+                          <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Berhitung</strong></td>
+                          <td><span class="badge bg-label-primary me-1">B</span></td>
+                          <td>
+                            <a href="<?php echo base_url(); ?>wali/nilai/detail" class="btn btn-primary">
+                              Detail
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-              </div>
               <?php } ?>
             </div>
             <!--/ Total Revenue -->

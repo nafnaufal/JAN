@@ -29,6 +29,16 @@ class Wali extends CI_Controller
         $this->load->view('wali_murid/pendaftaran/view', $data);
         $this->load->view('templates_wali/footer');
     }
+    
+    public function detailNilai()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        
+        $this->load->view('templates_wali/header');
+        $this->load->view('wali_murid/nilai/view');
+        $this->load->view('templates_wali/footer');
+    }
 
     public function editPendaftaran()
     {

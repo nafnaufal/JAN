@@ -90,6 +90,7 @@ $route['admin/pendaftaran/delete'] = 'admin/deletePendaftaran';
 // Admin Mapel
 $route['admin/mapel'] = 'admin/mapel';
 $route['admin/mapel/add'] = 'admin/addMapel';
+$route['admin/mapel/edit'] = 'admin/editMapel';
 $route['admin/mapel/delete'] = 'admin/deleteMapel';
 $route['admin/jadwal/add'] = 'admin/addJadwal';
 $route['admin/jadwal/view'] = 'admin/viewMapel';
@@ -104,7 +105,7 @@ $route['guru/nilai/edit'] = 'guru/editNilai';
 $route['guru/nilai/view'] = 'guru/viewNilai';
 $route['guru/nilai/save'] = 'guru/saveNilai';
 $route['guru/nilai/delete'] = 'guru/deleteNilai';
-$route['guru/pengumuman'] = 'guru/pengumuman';
+$route['admin/pengumuman'] = 'admin/pengumuman';
 
 // Pendaftaran
 $route['pendaftaran'] = 'admin/pendaftaran';
@@ -116,6 +117,7 @@ $route['guru/ganti_password'] = 'guru/ganti_password';
 
 // Wali Murid
 $route['wali/dashboard'] = 'wali';
+$route['wali/nilai/detail'] = 'wali/detailNilai';
 $route['wali/pendaftaran'] = 'wali/viewPendaftaran';
 $route['wali/pendaftaran/edit'] = 'wali/editPendaftaran';
 $route['wali/pendaftaran/update'] = 'wali/updatePendaftaran';
