@@ -254,7 +254,7 @@ class Admin extends CI_Controller
 
         $this->load->model('Mapel_model');
         $data['data'] = $this->Mapel_model->get_all_mapel();
-
+        
         $this->load->view('templates/header');
         $this->load->view('admin/jadwal/browse', $data);
         $this->load->view('templates/footer');
@@ -264,19 +264,48 @@ class Admin extends CI_Controller
         $this->load->helper('url');
         $this->load->library('session');
 
+
         $this->load->view('templates/header');
         $this->load->view('admin/jadwal/add_mapel');
         $this->load->view('templates/footer');
+    }
+    public function saveMapel()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $this->load->model('Mapel_model');
+
+        $this->Mapel_model->save_data();
+
+        // echo($nama);
+        
+        $this->mapel();
     }
     
     public function editMapel()
     {
         $this->load->helper('url');
         $this->load->library('session');
+        $this->load->model('Mapel_model');
+
+        $data['data'] = $this->Mapel_model->get_mapel();
+
 
         $this->load->view('templates/header');
-        $this->load->view('admin/jadwal/edit_mapel');
+        $this->load->view('admin/jadwal/edit_mapel', $data);
         $this->load->view('templates/footer');
+    }
+    public function updateMapel()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $this->load->model('Mapel_model');
+
+        $this->Mapel_model->update_data();
+
+        // echo($nama);
+        
+        $this->mapel();
     }
     public function deleteMapel()
     {

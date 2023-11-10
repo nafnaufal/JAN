@@ -14,21 +14,9 @@
                     </div>
                     <div class="card-body">
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="nama">Praktek</label>
+                            <label class="col-sm-2 col-form-label" for="nama">Catatan</label>
                             <div class="col-sm-10">
-                                <span>78</span>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="nama">Praktek</label>
-                            <div class="col-sm-10">
-                                <span>78</span>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="nama">Praktek</label>
-                            <div class="col-sm-10">
-                                <span>78</span>
+                                <span></span>
                             </div>
                         </div>
                     </div>
